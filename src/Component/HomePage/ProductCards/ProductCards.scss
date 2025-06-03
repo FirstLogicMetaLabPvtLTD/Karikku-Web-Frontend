@@ -1,0 +1,206 @@
+.ProductCardWrapper {
+  margin-top: 4rem;
+  padding: 20px 10px;
+  overflow-x: hidden;
+
+  .row {
+    margin: auto;
+  }
+
+  .col-lg-6 {
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+
+    @media (min-width: 992px) {
+      width: 50%;
+    }
+  }
+
+  .product-card {
+    position: relative;
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    height: 690px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; // Added to contain zoomed image
+    transition: transform 0.3s ease; // Card transition for subtle lift effect
+
+    &:hover {
+      // transform: translateY(-5px); // Subtle lift effect on hover
+
+      .product-image img {
+        transform: scale(1.05); // Zoom in effect
+      }
+
+      // vector animation
+      .oil-vector {
+        transform: translateX(30px); // Move vector to left side
+      }
+
+      .bottle-vector {
+        transform: translateY(40px);
+      }
+    }
+
+    &.coconut-oil {
+      background-color: #FFF5CB;
+      color: #675606;
+    }
+
+    &.coconut-water {
+      background-color: #3DAE4A;
+      color: #FFFFFF;
+      width: 100%;
+    }
+
+    .oil-vector {
+      position: absolute;
+      top: 0;
+      left: 313.5px;
+      border-top-right-radius: 15px;
+      transition: transform 0.4s ease; // Smooth transition for vector movement
+      @media(max-width:576px){
+        left: 173.5px;
+      }
+    }
+
+    .bottle-vector {
+      position: absolute;
+      bottom: 0;
+      left: 212px;
+      transition: transform 0.4s ease; // Smooth transition for vector movement
+    }
+    @media(max-width: 576px){
+      text-align: center;
+    }
+     @media(max-width: 576px){
+        .oil-option{
+          padding: 5px 10px !important;
+        }
+      }
+  }
+
+  .available-text {
+    font-family: General Sans;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    text-transform: uppercase;
+  }
+
+  .pack-options {
+    display: flex;
+    gap: 10px;
+    padding-top: 9px;
+    margin-bottom: 20px;
+
+     @media(max-width: 576px){
+      justify-content: center;
+    }
+
+    .pack-option {
+      background-color: #F4E9B5;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 9px;
+      padding: 5px 15px;
+      font-family: Nohemi;
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: 0%;
+      text-align: center;
+      color: #675606;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &.oil-option {
+        background-color: #2E8E39;
+        color: #FFFFFF;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+     
+    }
+  }
+
+  .product-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    height: 292.59478759765625px;
+    overflow: hidden; // Added to contain zoomed image
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      transition: transform 0.4s ease; // Smooth transition for zoom effect
+    }
+
+    .bottle-card {
+      position: absolute;
+      width: 130px;
+      left: 300px;
+      top: 180px;
+      transition: transform 0.4s ease; // Smooth transition for zoom effect
+
+      @media(max-width: 576px) {
+        left: 110px;
+        top: 180px;
+      }
+    }
+  }
+
+  .product-heading {
+    margin-top: 4rem;
+    font-family: Nohemi;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 105%;
+    letter-spacing: -2%;
+
+    .coconut-water & {
+      color: white;
+    }
+  }
+
+  .product-description {
+    font-family: General Sans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    width: 60%;
+    margin-bottom: 20px;
+
+    .brand {
+      font-weight: 600;
+    }
+
+    @media(max-width:576px) {
+      display: none;
+    }
+  }
+
+  .buy-button {
+    .arrow-icon {
+      margin-left: 10px;
+      font-size: 18px;
+    }
+
+    &.outline {
+      background-color: transparent;
+      border: 1px solid white;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}

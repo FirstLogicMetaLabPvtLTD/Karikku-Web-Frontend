@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.Explore-Main-wrapper {
+    .filters-section-e{
+        cursor: pointer;
+    }
+
+    .explore-contents {
+
+        .hide {
+            display: none;
+        }
+
+
+        padding: 5.5rem 2rem 0rem 0rem;
+
+        .Head-and-filter-main-flex {
+            display: flex;
+            // justify-content:space-around;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30rem;
+
+            .heading-section-explore {
+                padding: 1rem 2rem;
+                // background-color: red;
+
+
+                h3 {
+                    font-family: Nohemi;
+                    font-weight: 600;
+                    font-size: 32px;
+                    line-height: 105%;
+                    letter-spacing: -2%;
+
+                    background: linear-gradient(92.63deg, #738933 0.29%, #062C0B 85.03%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    /* Optional for better compatibility */
+                    background-clip: text;
+                    color: transparent;
+
+                    /* text-align: center; */
+                    /* Uncomment if needed */
+                }
+
+                .choose-section {
+                    width: 146;
+                    height: 23;
+                    top: 213px;
+                    left: 104px;
+
+
+                    p {
+                        font-family: General Sans;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 130%;
+                        letter-spacing: 0%;
+                        color: #1B1919;
+
+                    }
+
+                }
+
+            }
+
+            .fiiter-section-explore-child-flex {
+                display: flex;
+                gap: 20px;
+
+                .filters-section-e {
+                    p {
+
+                        font-family: DM Sans;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 130%;
+                        letter-spacing: 0%;
+                        text-align: right;
+
+
+                    }
+                }
+
+            }
+
+
+        }
+
+        .cards-and-filter {
+            display: flex;
+
+            .left-side {
+                height: 100vh;
+                position: sticky;
+                top: 100px;
+            }
+
+            .cards-whole-three {
+                .three-cards {
+                    // width: 431.336669921875px;
+                    // height: 916px;
+                    // top: 278px;
+                    // left: 104px;
+                    // gap: 19px;  
+                    padding: 0rem 0rem 0rem 6rem;
+
+
+                    .product-card {
+                        width: 264.6700134277344px;
+                        height: 304px;
+                        background-color: #F6F6F6;
+                        // background-color: red;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        margin-bottom: 9rem;
+
+
+                        // &:hover {
+                        //     transform: scale(1.02);
+                        // }
+
+
+                        .product-card-img-btn {
+                            position: relative;
+                            text-align: center;
+                            padding: 1rem;
+                            top: 25px;
+                            left: 1px;
+
+
+
+                            img {
+                                max-width: 70%;
+                                // height: auto;
+                                height: 234.90020751953125PX;
+                                object-fit: cover;
+                            }
+
+                            .add-btn {
+                                position: absolute;
+                                width: 38px;
+                                height: 38px;
+                                top: 222px;
+                                left: 214px;
+                                border-radius: 100px;
+                                border-width: 1px;
+                                cursor: pointer;
+                                color: #1B1919;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                        }
+
+                        .product-details {
+                            padding: 3.5rem 0.1rem;
+
+                            h6 {
+                                font-family: General Sans;
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 120%;
+                                letter-spacing: 0%;
+                                color: #1B1919;
+
+
+                            }
+
+                            .availability {
+                                font-family: General Sans;
+                                font-weight: 400;
+                                font-size: 15px;
+                                line-height: 130%;
+                                letter-spacing: 0%;
+                                color: #666666;
+
+
+                                .volume {
+                                    font-family: General Sans;
+                                    font-weight: 600;
+                                    font-size: 15px;
+                                    line-height: 130%;
+                                    letter-spacing: 0%;
+                                    color: #3DAE4A;
+
+                                }
+                            }
+
+                            .price {
+                                font-family: General Sans;
+                                font-weight: 600;
+                                font-size: 18px;
+                                line-height: 130%;
+                                letter-spacing: 0%;
+                                color: #1B1919;
+
+                            }
+
+
+                        }
+
+
+
+
+
+                    }
+
+
+
+                }
+            }
+        }
+
+
+
+
+
+
+
+    }
+
+
+
+    @media screen and (max-width: 548px) {
+
+        .explore-contents {
+
+            padding: 3rem 2rem;
+
+            .Head-and-filter-main-flex {
+                display: flex;
+                gap: 0rem;
+
+                .heading-section-explore {
+                    padding: 0.1rem 0.5rem;
+                    // background-color: red;
+
+
+                    h3 {
+                        font-family: Nohemi;
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 114.99999999999999%;
+                        letter-spacing: -2%;
+
+                    }
+
+                    .choose-section {
+
+
+                        p {
+                            font-size: 17px;
+
+                        }
+
+                    }
+
+                }
+
+                .fiiter-section-explore-child-flex {
+                    display: flex;
+                    margin-top: 1rem;
+                    gap: 20px;
+
+                }
+
+
+            }
+
+        }
+
+    }
+
+}

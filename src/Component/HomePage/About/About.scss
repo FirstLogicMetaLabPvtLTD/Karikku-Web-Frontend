@@ -1,0 +1,353 @@
+@font-face {
+  font-family: 'Resonate';
+  src: url('/public/Fonts/Resonate.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/public/Fonts/Nohemi-SemiBold-BF6438cc57db2ff.woff') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.AboutMainWrapper {
+
+  .about-top {
+    text-align: center;
+    padding: 0 1rem;
+    height: auto;
+    padding-bottom: 1rem;
+    margin-top: 12rem;
+
+    .about-header-section {
+      h3 {
+        font-family: Resonate;
+        font-weight: 400;
+        font-size: 56px;
+        background: linear-gradient(90deg, rgba(245, 189, 46, 1) 0%, rgba(52, 109, 0, 1) 83%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      h2 {
+        font-family: Nohemi;
+        font-weight: 600;
+        font-size: 80px;
+        line-height: 105%;
+        letter-spacing: -2%;
+        background: linear-gradient(90deg, rgba(115, 137, 51, 1) 10%, rgba(6, 44, 11, 1) 83%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        img {
+          width: 40px;
+          height: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .description {
+      margin-top: 2rem;
+
+      p {
+        font-family: General Sans;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        letter-spacing: -2%;
+        text-align: center;
+      }
+
+      button {
+        margin-top: 2rem;
+        color: #0E3E13;
+        padding: 7px 7px 7px 18px;
+        background-color: transparent;
+        border: 1px solid black;
+        font-family: General Sans;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: 0%;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        .btn-icon {
+          margin-left: 5px;
+          width: 24px;
+          height: 24px;
+          color: #3DAE4A;
+        }
+
+        #about-us {
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+
+  // Achievement section
+
+  .achievements {
+    padding-top: 5rem;
+    width: 100%;
+    margin: auto;
+
+    .achv-main {
+      padding-left: 2rem;
+
+      h3 {
+        font-family: Nohemi;
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 110.00000000000001%;
+        letter-spacing: -2%;
+        color: #072C0B;
+
+      }
+
+      p {
+        font-family: General Sans;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 0%;
+        color: #050D1E;
+      }
+    }
+  }
+
+  // Marque section
+  .marque-main {
+    margin-top: 3rem;
+
+  }
+
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .marquee {
+    display: flex;
+    gap: 15px;
+    animation: scroll 30s linear infinite;
+    padding: 5px 0;
+  }
+
+  .pill {
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    min-width: fit-content;
+    height: 40px;
+    // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-pill {
+    background-color: transparent;
+    border: 1px solid #B0E1B5;
+    color: #4a6741;
+    font-family: General Sans;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -3%;
+    width: 200px;
+    height: 58px;
+
+  }
+
+  .image-pill {
+  padding: 0;
+  overflow: hidden;
+  width: 180px !important;
+  height: 65px;
+  border-radius: 50px;
+  display: inline-block; /* Ensures consistent container behavior */
+}
+
+.image-pill img {
+  width: 100%;
+  height: 100%; /* Changed from 'auto' to '100%' */
+  object-fit: cover;
+  border-radius: 50px;
+  display: block; /* Removes any inline spacing issues */
+}
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* For the second row of pills */
+  .reverse {
+    animation: scroll-reverse 30s linear infinite;
+  }
+
+  @keyframes scroll-reverse {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+  // 📱 Mobile (up to 576px)
+  @media (max-width: 576px) {
+    margin-top: 2rem !important;
+
+    .about-top {
+      text-align: start;
+      margin-top: 0rem;
+
+
+      .about-header-section {
+
+        h3 {
+          font-size: 22px;
+        }
+
+        h2 {
+          padding-top: .5rem;
+          font-size: 30px;
+
+          img {
+            display: none;
+          }
+
+          img {
+            width: 25px;
+          }
+        }
+      }
+
+      .description {
+        margin-top: 1rem !important;
+        text-align: start !important;
+
+        p {
+          font-size: 16px;
+          text-align: start;
+        }
+
+        button {
+          font-size: 16px;
+          font-weight: 400;
+          margin-top: 1.5rem;
+
+
+          .btn-icon {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        #about-us {
+          display: none;
+        }
+      }
+    }
+
+    // Achievement section
+    .achievements {
+      // margin-top: 1rem;
+      padding-top: 2rem;
+      width: 100%;
+
+      .achv-main {
+        padding-left: 1rem;
+
+        h3 {
+
+          font-weight: 600;
+          font-size: 32px;
+
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          width: 70%;
+
+        }
+      }
+    }
+
+    // marquee
+    .marque-main {
+      margin-top: 2rem;
+
+    }
+
+    .pill {
+      border-radius: 50px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      min-width: fit-content;
+      height: 40px;
+      width: 150px;
+      // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+
+  // 💻 Tablet (577px to 768px)
+  @media(min-width:577px)and (max-width: 768px) {
+    .about-top {
+      margin-top: 1rem;
+
+      .about-header-section {
+        h3 {
+          font-size: 40px;
+        }
+
+        h2 {
+          font-size: 60px;
+        }
+      }
+
+      .description {
+        p {
+          font-size: 18px;
+        }
+
+        button {
+          font-size: 15px;
+
+          .btn-icon {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+    }
+  }
+   @media(min-width:769px)and (max-width: 991px) {
+     .about-top {
+      margin-top: 1rem;
+     }
+   }
+     @media(min-width:991px)and (max-width: 1199px) {
+     .about-top {
+      margin-top: 1rem;
+     }
+   }
+
+}

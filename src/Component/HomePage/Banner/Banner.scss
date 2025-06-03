@@ -1,0 +1,45 @@
+.BannerMainWrapper {
+    margin-top: 1rem;
+
+    .carousel {
+
+
+        width: 100%;
+        padding: 4.5rem 2rem 2rem 2rem;
+        height: 100vh;
+
+        .carousel-item {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @media(max-width:768px) {
+        .carousel {
+
+            width: 100%;
+            height: auto;
+             padding: 3rem 1rem 1rem 1rem;
+            .carousel-item {
+
+                img {}
+            }
+        }
+    }
+    @media(min-width:576px) and (max-width:768px){
+        .carousel{
+            height: 50vh;
+        }
+    }
+      @media(min-width:767px) and (max-width:991px){
+        .carousel{
+            height: 45vh;
+        }
+    }
+      @media(min-width:992px) and (max-width:1199px){
+        .carousel{
+            height: 50vh;
+        }
+    }
+}

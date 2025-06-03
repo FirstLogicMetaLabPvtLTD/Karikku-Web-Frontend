@@ -1,0 +1,175 @@
+import React, { useState } from 'react'
+import CartNavbar from '../CartNavbar/CartNavbar'
+import './Cart.scss'
+import { RiDeleteBin6Line } from 'react-icons/ri';
+import { GoHeart } from 'react-icons/go';
+
+const Cart = () => {
+  const [cartItems, setCartItems] = useState([
+    {
+      id: 1,
+      name: 'Karikku pure Coconut Oil',
+      type: 'Pet bottle',
+      price: 1000,
+      quantity: "2 Ltr",
+      image: '/Images/cart-oil-bottle.svg',
+      offer: '20% off'
+    },
+    // {
+    //   id: 2,
+    //   name: 'Karikku Pure Coconut Oil',
+    //   type: 'Pouch',
+    //   price: 543,
+    //   quantity: 2,
+    //   image: '/Images/cart-oil-bottle.svg',
+    //   offer: '30% off'
+    // },
+    {
+      id: 3,
+      name: 'Tender Coconut Water',
+      type: '20 pack',
+      price: 14345,
+      quantity: "100 ML",
+      image: '/Images/cart-bottle.svg',
+      offer: '5% off'
+    }
+  ]);
+    const [count, setCount] = useState(2);
+
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count - 1);
+  const [couponCode, setCouponCode] = useState('');
+
+  const updateQuantity = (id, change) => {
+    setCartItems(items =>
+      items.map(item =>
+        item.id === id
+          ? { ...item, quantity: Math.max(1, item.quantity + change) }
+          : item
+      )
+    );
+  };
+
+  const removeItem = (id) => {
+    setCartItems(items => items.filter(item => item.id !== id));
+  };
+
+  const totalMRP = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const discountOnMRP = 120.00;
+  const couponSavings = 310.00;
+  const gst = 8.00;
+  const delivery = 0;
+  const total = totalMRP - discountOnMRP - couponSavings + gst + delivery;
+  return (
+    <div className='CartMainwrapper'>
+      <CartNavbar />
+      <div className="cart-header">
+        <h2>My Cart ({cartItems.length})</h2>
+
+      </div>
+
+      <div className="cart-main-row row">
+        <div className="col-lg-8 cart">
+          {
+            cartItems.map((item) => (
+             <div className="cart-box" key={item.id}>
+               <div className="cart-details-row" >
+                <div className="cart-left">
+                  <div className="prod-image">
+                    <img src={item.image} alt="" />
+                  </div>
+                  <div className="cart-prod-detail">
+                    <div className="quantity"><p>{item.quantity}</p></div>
+                    <div className="prod-name"><h4>{item.name}</h4></div>
+                    <div className="buttons">
+                      <p><RiDeleteBin6Line className='btn-icon' /> Remove</p>
+                      <div className="separator"></div>
+                      <p><GoHeart className='btn-icon' /> Add to wishlist</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="cart-right">
+                  <div className="counter">
+                    <button className="counter__btn counter__btn--minus" onClick={decrement}>
+                      −
+                    </button>
+                    <span className="counter__value">{count}</span>
+                    <button className="counter__btn counter__btn--plus" onClick={increment}>
+                      +
+                    </button>
+                  </div>
+                  <div className="price-detail" style={{textAlign:"end"}}>
+                    <div className="r-price"><p>₹{item.price}</p></div>
+                    <div className="offer-price">
+                    <div className="mob-price"><p>₹{item.price}</p></div>
+
+                      <strike>12000</strike>
+                      <div className="off">
+                       <p> 10% OFF</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+
+             </div>
+
+             
+              
+            ))
+            
+          }
+
+        </div>
+        <div className="col-lg-4 payment-summary-section">
+          <div className="coupon">
+            <div className="left-coupon">
+              <img src="/Images/coin.svg" alt="" />
+              <h3>Apply coins</h3>
+            </div>
+            <div className="right-coupon">
+              <p>Apply</p>
+            </div>
+          </div>
+          <div className="payment-summary">
+            <h3>Payment summary</h3>
+            <table>
+              <tr className='table-row'>
+                <td className='left-side'>Total MRP</td>
+                <td className='right-side'>₹223.00</td>
+              </tr>
+               <tr className='table-row'>
+                <td className='left-side'>Discount on MRP</td>
+                <td className='right-side'style={{color:"#3DAE4A"}}>₹223.00</td>
+              </tr>
+               <tr className='table-row'>
+                <td className='left-side'>Coupon savings</td>
+                <td className='right-side' style={{color:"#3DAE4A"}}>-₹223.00</td>
+              </tr>
+               <tr className='table-row'>
+                <td className='left-side'>Appicable Gst</td>
+                <td className='right-side'>₹223.00</td>
+              </tr>
+               <tr className='table-row border-bottom'>
+                <td className='left-side'>Delivery</td>
+                <td className='right-side'>₹223.00</td>
+              </tr>
+               <tr className='table-row'>
+                <td className='left-side' style={{fontWeight:"600"}}>Total</td>
+                <td className='right-side'  style={{fontWeight:"600"}}>₹1058.00</td>
+              </tr>
+            </table>
+          </div>
+          <div className="checkout-btn">
+            <button>Proceed to checkout</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  )
+}
+
+export default Cart
