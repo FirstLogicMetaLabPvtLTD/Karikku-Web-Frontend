@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar'
 import ProductSidebar from '../ProductSidebar/ProductSidebar'
 import { VscSettings } from 'react-icons/vsc'
 import { FiPlus } from 'react-icons/fi'
+import Footer from '../Footer/Footer'
 
 const ExploreProducts = () => {
     const [sideBarIsOpen, setSidebarIsOpen] = useState(true);
@@ -345,6 +346,9 @@ const ExploreProducts = () => {
 
 
             </div>
+
+
+            <Footer/>
 
 
 

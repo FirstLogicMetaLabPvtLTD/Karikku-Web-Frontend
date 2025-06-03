@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar'
 import './AllProducts.scss'
 import { Link } from 'react-router-dom'
 import { ImArrowUpRight2 } from "react-icons/im";
+import Footer from '../Footer/Footer';
 
 
 const AllProducts = () => {
@@ -116,7 +117,13 @@ const AllProducts = () => {
                         </div>
                     </Link>
                 </div>
+
+
             </div>
+
+            <Footer />
+
+
         </div>
     )
 }
