@@ -224,8 +224,8 @@
                             width: 528px;
                             height: 408px;
                             max-width: 100%;
-                            left: 564px;
-                            top: -37px;
+                            left: 632px;
+                            top: -1px;
 
 
                         }
@@ -234,8 +234,8 @@
                             height: 400px;
                             position: absolute;
                             width: 536px;
-                            left: 662px;
-                            top: -30px;
+                            left: 700px;
+                            top: -10px;
                         }
 
                         .child-img {
@@ -291,7 +291,7 @@
 
     }
 
-    @media(max-width:576px) {
+    @media(max-width:575.98px) {
         .exclusive-content {
             padding: 2rem !important;
 
@@ -481,6 +481,131 @@
                     .child-img {
                         position: absolute;
                         right: -64px !important;
+                        top: 242px !important;
+                        z-index: 666;
+                        width: 255px !important;
+                    }
+
+                    .shirt-img {
+                        position: absolute;
+                        left: -22px !important;
+                        width: 243px !important;
+                        top: 235px !important;
+                    }
+
+                    .Cap-img {
+                        position: absolute;
+                        left: 130px !important;
+                        width: 222px !important;
+                        max-width: 100%;
+                        z-index: 333;
+                        top: 230px !important;
+
+
+                    }
+
+                    .White-shirt-img {
+                        position: absolute;
+                        left: 300px !important;
+                        width: 215.99px !important;
+                        top: 219px !important;
+
+                    }
+
+                }
+
+
+
+            }
+
+
+        }
+
+    }
+
+
+    @media (min-width: 768px) and (max-width: 992px) {
+
+        .three-cards {
+
+            .product-card {
+                // background-color: red !important;
+                margin-bottom: 7rem !important;
+
+            }
+        }
+
+        .merchanise-banner {
+            width: 100% !important;
+            height: 448px !important;
+
+            .merchanise-banner-sub {
+
+
+                .explore-btn {
+                    // margin-top: 1rem;
+                    width: 40.625px !important;
+                    height: 40.625px !important;
+                    top: 227.19px;
+                    left: 9.19px;
+                    background-color: #3DAE4A;
+                    color: #fff;
+                    border-radius: 24px;
+                    border: none;
+
+                }
+
+                .text-section {
+                    padding: 2rem 0rem;
+                    top: 20px !important;
+                    left: 21px !important;
+
+                    p {
+                        font-family: Nohemi;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 105%;
+                        letter-spacing: -2%;
+
+                    }
+
+                    h2 {
+                        font-family: Nohemi;
+                        font-weight: 600;
+                        font-size: 32px;
+                        line-height: 105%;
+                        letter-spacing: -2%;
+                        text-transform: capitalize;
+
+                    }
+
+
+                }
+
+                .background-shapes {
+                    height: 448px !important;
+
+                    .light-img {
+                        position: absolute;
+                        width: 400px !important;
+                        height: 408px;
+                        left: 505px !important;
+                        top: 76px !important;
+
+
+                    }
+
+                    .dark-img {
+                        height: 400px;
+                        position: absolute;
+                        width: 332px !important;
+                        left: 578px !important;
+                        top: 116px !important;
+                    }
+
+                    .child-img {
+                        position: absolute;
+                        right: -14px !important;
                         top: 242px !important;
                         z-index: 666;
                         width: 255px !important;

@@ -8,7 +8,7 @@ import Footer from '../Footer/Footer'
 
 const ExploreProducts = () => {
     const [sideBarIsOpen, setSidebarIsOpen] = useState(true);
-    const [bottomBarIsOpen,setBottomBarIsOpen]=useState(false)
+    const [bottomBarIsOpen, setBottomBarIsOpen] = useState(false)
 
     const handleSideBar = () => {
         setSidebarIsOpen(!sideBarIsOpen)
@@ -55,7 +55,13 @@ const ExploreProducts = () => {
                         </div>
 
                         <div className="filters-section-e">
-                            <p>Sort by</p>
+                            {/* <label htmlFor="sortDropdown">Sort by</label> */}
+                            <select id="sortDropdown" className="sort-dropdown">
+
+                                <option value="lowToHigh">Sort By</option>
+                                <option value="lowToHigh">Price Low to High</option>
+                                <option value="highToLow">Price High to Low</option>
+                            </select>
                         </div>
                     </div>
 
@@ -348,7 +354,7 @@ const ExploreProducts = () => {
             </div>
 
 
-            <Footer/>
+            <Footer />
 
 
 

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 .Explore-Main-wrapper {
-    .filters-section-e{
+    .filters-section-e {
         cursor: pointer;
     }
 
@@ -19,7 +19,7 @@
             // justify-content:space-around;
             justify-content: space-around;
             flex-wrap: wrap;
-            gap: 30rem;
+            gap: 1rem;
 
             .heading-section-explore {
                 padding: 1rem 2rem;
@@ -70,6 +70,19 @@
                 gap: 20px;
 
                 .filters-section-e {
+                    
+                    margin-top: 0rem;
+                   
+
+                    select{
+                        border: none !important;
+
+                    }
+                    select:hover{
+                        border: none !important;
+
+                    }
+
                     p {
 
                         font-family: DM Sans;
@@ -105,6 +118,9 @@
                     // left: 104px;
                     // gap: 19px;  
                     padding: 0rem 0rem 0rem 6rem;
+                    // margin: auto;
+
+
 
 
                     .product-card {
@@ -228,7 +244,15 @@
 
         .explore-contents {
 
-            padding: 3rem 2rem;
+            padding: 3rem 1rem;
+
+            .cards-whole-three {
+                .three-cards {
+                    //    margin: auto !important;
+                    padding: 0rem 0rem 0rem 2rem !important;
+                }
+            }
+
 
             .Head-and-filter-main-flex {
                 display: flex;
@@ -236,7 +260,7 @@
 
                 .heading-section-explore {
                     padding: 0.1rem 0.5rem;
-                    // background-color: red;
+
 
 
                     h3 {
@@ -273,5 +297,6 @@
         }
 
     }
+
 
 }
