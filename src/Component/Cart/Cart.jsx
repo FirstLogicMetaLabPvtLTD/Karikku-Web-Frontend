@@ -3,8 +3,19 @@ import CartNavbar from '../CartNavbar/CartNavbar'
 import './Cart.scss'
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { GoHeart } from 'react-icons/go';
+import Footer from '../Footer/Footer';
+import CustomModal from '../CouponModal/CouponModal';
 
 const Cart = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  function openModal() {
+    setModalIsOpen(true);
+  }
+
+  function closeModal() {
+    setModalIsOpen(false);
+  }
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
@@ -61,8 +72,14 @@ const Cart = () => {
   const delivery = 0;
   const total = totalMRP - discountOnMRP - couponSavings + gst + delivery;
   return (
+ <>
     <div className='CartMainwrapper'>
       <CartNavbar />
+       <CustomModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        title="Apply coupons"
+      ></CustomModal>
       <div className="cart-header">
         <h2>My Cart ({cartItems.length})</h2>
 
@@ -129,7 +146,7 @@ const Cart = () => {
               <h3>Apply coins</h3>
             </div>
             <div className="right-coupon">
-              <p>Apply</p>
+              <p onClick={openModal}>Apply</p>
             </div>
           </div>
           <div className="payment-summary">
@@ -166,9 +183,9 @@ const Cart = () => {
           </div>
         </div>
       </div>
-
-
     </div>
+    <Footer/>
+ </>
   )
 }
 
