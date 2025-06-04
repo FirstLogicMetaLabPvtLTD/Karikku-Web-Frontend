@@ -3,19 +3,20 @@ import { Link } from 'react-router-dom';
 import './Navbar.scss';
 import { BsBasket3 } from 'react-icons/bs';
 
-function Navbar() {
+const Navbar = ({bgColor="#FFFFFF"}) => {
+  
 
   // Off-canvas states
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="NavbarMainWrapper">
-      <nav className="navbar-desktop   navbar-expand-lg bg-white  fixed-top py-3">
+      <nav className={`navbar-desktop   navbar-expand-lg  fixed-top py-3`} style={{backgroundColor:bgColor}}>
         <div className="container-fluid d-flex justify-content-between align-items-center navbar-sub">
           {/* Left Links */}
           <div className="nav-item d-flex">
             <Link className="nav-link mx-2" to="/">Home</Link>
-            <Link className="nav-link mx-2" to="/about">About Us</Link>
+            <Link className="nav-link mx-2" to="/aboutus">About Us</Link>
             <Link className="nav-link mx-2" to="/process">Our Process</Link>
             <Link className="nav-link mx-2" to="/stores">Stores</Link>
           </div>
@@ -23,7 +24,7 @@ function Navbar() {
           {/* Center Logo */}
           <div className="Nav-logo mx-auto position-absolute start-50 translate-middle-x">
             <Link className="navbar-brand " to="/">
-              <img src="./Images/Karikku logo 1.png" alt="Karikku Logo" style={{ height: '40px' }} />
+              <img src="./Images/Karikku logo-bg-removed.svg" alt="Karikku Logo" style={{ height: '40px' }} />
             </Link>
           </div>
 
@@ -105,8 +106,8 @@ function Navbar() {
             </div>
           </div>
         </div>
-       
-        
+
+
       </div>
     </div>
 

@@ -1,0 +1,242 @@
+.AboutUsWrapper {
+    .our-story {
+        padding-top: 8rem;
+        text-align: center;
+        padding-bottom: 4rem;
+        background-color: #F3FFF4;
+
+        h3 {
+            padding-top: 3rem;
+            font-family: Resonate;
+            font-weight: 400;
+            font-size: 56px;
+            line-height: 100%;
+            letter-spacing: -2%;
+            text-align: center;
+            background: linear-gradient(90deg, rgba(245, 189, 46, 1) 38%, rgba(52, 109, 0, 1) 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        h2 {
+            font-family: Nohemi;
+            font-weight: 600;
+            font-size: 80px;
+            line-height: 105%;
+            letter-spacing: -2%;
+            text-align: center;
+            background: linear-gradient(90deg, rgba(115, 137, 51, 1) 10%, rgba(6, 44, 11, 1) 83%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        p {
+            font-family: General Sans;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 130%;
+            letter-spacing: -2%;
+            text-align: center;
+            color: #1B1919;
+        }
+    }
+
+
+    .vision,
+    .mission {
+        // padding: 30px;
+        margin-top: 7rem;
+
+
+        h3 {
+            font-family: Resonate;
+            font-weight: 400;
+            font-size: 56px;
+            line-height: 100%;
+            padding-top: 1rem;
+            letter-spacing: -2%;
+            background: linear-gradient(90deg, rgba(245, 189, 46, 1) 0%, rgba(52, 109, 0, 1) 12%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        h2 {
+            font-family: Nohemi;
+            font-weight: 600;
+            font-size: 72px;
+            line-height: 105%;
+            letter-spacing: -2%;
+            background: linear-gradient(90deg, rgba(115, 137, 51, 1) 10%, rgba(6, 44, 11, 1) 83%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        p {
+            font-family: General Sans;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 130%;
+            letter-spacing: -2%;
+            color: #1B1919;
+
+        }
+
+        .images {
+            height: 100px;
+            display: flex;
+            gap: 2rem;
+            padding-right: 2rem;
+
+            .imge-individual {
+                width: 250px;
+                border-radius: 40px;
+                height: 334px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .imge-individual2 {
+                width: 350px;
+                border-radius: 40px;
+                height: 464px;
+                overflow: hidden;
+                margin-top: 3rem;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .mission {
+        .mission-images {
+            display: flex;
+            gap: 50px;
+
+
+            .mission-girl {
+                width: 337px;
+                height: 551px;
+                overflow: hidden;
+                border-radius: 40px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
+
+            .mission-bottle {
+                margin-top: 2rem;
+                width: 340.5px;
+                height: 227px;
+                overflow: hidden;
+                border-radius: 40px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
+        }
+    }
+
+    // Mission
+    .promise {
+        padding: 25px;
+        margin-top: 7rem;
+
+        h2 {
+            font-family: Nohemi;
+            font-weight: 600;
+            font-size: 72px;
+            line-height: 105%;
+            letter-spacing: -2%;
+            background: linear-gradient(90deg, rgba(115, 137, 51, 1) 10%, rgba(6, 44, 11, 1) 83%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        p {
+            font-family: General Sans;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 130%;
+            letter-spacing: -2%;
+
+        }
+
+        .commitment-features {
+            background: #F3FFF4;
+            padding: 48px;
+            width: 100%;
+            height: 285px;
+            border: 1px solid #CEEDD1;
+            border-radius: 20px;
+            margin: auto;
+            margin-top: 3rem;
+            .icon{
+                height: 70px;
+                width: 70px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .icon-leaf{
+                // padding-top: 1rem;
+                  height: 70px;
+                width: 70px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    // object-fit: cover;
+                }
+            }
+
+            h3 {
+                font-family: General Sans;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 130%;
+                letter-spacing: 0%;
+                padding-top: 1rem;
+            }
+
+            p {
+                font-family: General Sans;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 130%;
+                letter-spacing: 0%;
+                padding-top: .8rem;
+
+            }
+
+            .col-lg-3 {
+                padding: 0 15px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+
+}

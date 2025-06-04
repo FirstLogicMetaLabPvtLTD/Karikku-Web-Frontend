@@ -10,6 +10,7 @@ import PageNotFound from './Component/PageNotFound/PageNotFound'
 import AllProducts from './Component/AllProducts/AllProducts'
 import Productsidebar from './Component/ProductSidebar/Productsidebar'
 import ExploreProducts from './Component/ExploreProducts/ExploreProducts'
+import AboutUs from './Component/AboutUs/AboutUs'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='/products' element={<AllProducts />} />
           <Route path='/Sidebar' element={<Productsidebar />} />
           <Route path='/ExploreProducts' element={<ExploreProducts />} />
+          <Route path='/aboutus' element={<AboutUs />} />
         </Routes>
 
 

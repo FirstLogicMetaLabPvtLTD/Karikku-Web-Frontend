@@ -14,7 +14,7 @@ import Navbar from '../Navbar/Navbar'
 const HomePage = () => {
   return (
     <div className='HomePageWrapper'>
-      <Navbar/>
+      <Navbar bgColor={"#FFFFFF"}/>
       <Banner/>
       <About/>
       <OneDrop/>  
