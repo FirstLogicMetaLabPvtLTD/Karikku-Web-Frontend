@@ -217,7 +217,7 @@
     // Mobile responsiveness
     @media(max-width: 768px) {
         .explore-contents {
-            padding: 2rem 0;
+            padding: 3.5rem 0;
 
             .Head-and-filter-main-flex {
                 flex-direction: column;
@@ -252,7 +252,47 @@
                     padding: 0.25rem;
 
                     .product-card {
+                        .prod-image-section {
+                            .add-icon-wrapper {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .product-card {
                         min-height: 250px;
+
+                        .product-details {
+
+                            h3 {
+                                font-family: DM Sans;
+                                font-weight: 500;
+                                font-size: 14px;
+                                line-height: 130%;
+                                letter-spacing: 0%;
+                                vertical-align: middle;
+
+                            }
+
+                            h4 {
+                                font-family: General Sans;
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 130%;
+                                letter-spacing: 0%;
+
+                            }
+
+                            p {
+                                font-family: General Sans;
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 130%;
+                                letter-spacing: 0%;
+
+                            }
+
+                        }
 
                         .prod-image-section {
                             height: 150px;

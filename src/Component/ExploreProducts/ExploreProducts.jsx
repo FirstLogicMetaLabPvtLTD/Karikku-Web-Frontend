@@ -233,15 +233,15 @@ const ExploreProducts = () => {
                                         <div className="product-card-main">
                                             <div className="product-card">
                                                 <div className="prod-image-section">
-                                                    <img src="/Images/Tshirt.png" alt="" />
+                                                    <img src={product.image} alt="" />
                                                     <div className="add-icon-wrapper">
                                                         <GoPlus className='add-icon' />
                                                     </div>
                                                 </div>
                                                 <div className="product-details">
-                                                    <h3>Coconut Oil - Pet Bottle</h3>
-                                                    <h4>Available in <span>3 color</span></h4>
-                                                    <p>₹159.00</p>
+                                                    <h3>{product.name}</h3>
+                                                    <h4>{product.availability} <span>{product.volume}</span></h4>
+                                                    <p>{product.price}</p>
                                                 </div>
                                             </div>
                                         </div>
