@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import './Productsidebar.scss';
 import { CiSearch } from 'react-icons/ci';
 
-const Productsidebar = ({bottomBarIsOpen}) => {
-    const [openSections, setOpenSections] = useState({
-        categories: false,
-        price: false,
-        colors: false
-    });
+const Productsidebar = () => {
+    // Changed: Now tracking only one open section at a time
+    const [openSection, setOpenSection] = useState(null);
 
     const [selectedFilters, setSelectedFilters] = useState({
         categories: [],
@@ -21,11 +18,9 @@ const Productsidebar = ({bottomBarIsOpen}) => {
         colors: ''
     });
 
+    // Modified: Toggle function to handle single accordion behavior
     const toggleSection = (section) => {
-        setOpenSections(prev => ({
-            ...prev,
-            [section]: !prev[section]
-        }));
+        setOpenSection(prev => prev === section ? null : section);
     };
 
     const handleFilterChange = (section, value) => {
@@ -71,7 +66,6 @@ const Productsidebar = ({bottomBarIsOpen}) => {
     };
 
     const colorMap = {
-
         'Black': '#000000',
         'White': '#ffffff',
         'Red': '#ef4444',
@@ -81,7 +75,6 @@ const Productsidebar = ({bottomBarIsOpen}) => {
         'Purple': '#8b5cf6',
         'Pink': '#ec4899',
         'Orange': '#f97316'
-
     };
 
     const ArrowIcon = ({ isOpen }) => (
@@ -118,9 +111,9 @@ const Productsidebar = ({bottomBarIsOpen}) => {
                     onClick={() => toggleSection('categories')}
                 >
                     <span className="filter-title">Categories <CiSearch /> </span>
-                    <ArrowIcon isOpen={openSections.categories} />
+                    <ArrowIcon isOpen={openSection === 'categories'} />
                 </div>
-                {openSections.categories && (
+                {openSection === 'categories' && (
                     <div className="filter-options">
                         <div className="search-container">
                             <input
@@ -157,9 +150,9 @@ const Productsidebar = ({bottomBarIsOpen}) => {
                     onClick={() => toggleSection('price')}
                 >
                     <span className="filter-title">Price</span>
-                    <ArrowIcon isOpen={openSections.price} />
+                    <ArrowIcon isOpen={openSection === 'price'} />
                 </div>
-                {openSections.price && (
+                {openSection === 'price' && (
                     <div className="filter-options">
                         <div className="search-container">
                             <input
@@ -196,9 +189,9 @@ const Productsidebar = ({bottomBarIsOpen}) => {
                     onClick={() => toggleSection('colors')}
                 >
                     <span className="filter-title">Colors</span>
-                    <ArrowIcon isOpen={openSections.colors} />
+                    <ArrowIcon isOpen={openSection === 'colors'} />
                 </div>
-                {openSections.colors && (
+                {openSection === 'colors' && (
                     <div className="filter-options">
                         <div className="search-container">
                             <input
