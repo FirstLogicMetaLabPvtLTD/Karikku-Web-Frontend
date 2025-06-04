@@ -64,10 +64,12 @@
                     select {
                         border: none !important;
                         background-color: transparent !important;
-                        width: 90px !important;
+                        // background-color: red;
+                        width: 130px !important;
                         font-family: DM Sans;
                         font-weight: 400;
                         font-size: 16px;
+
 
                         &:focus {
                             outline: none;

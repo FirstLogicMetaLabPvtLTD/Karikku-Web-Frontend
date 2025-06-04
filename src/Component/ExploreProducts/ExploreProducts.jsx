@@ -3,10 +3,13 @@ import './ExploreProducts.scss'
 import Navbar from '../Navbar/Navbar'
 import ProductSidebar from '../ProductSidebar/ProductSidebar'
 import { VscSettings } from 'react-icons/vsc'
-import { FiPlus } from 'react-icons/fi'
 import Footer from '../Footer/Footer'
 import ProductSidebarMobile from '../ProductSidebarMobile/ProductSidebarMobile'
 import { GoPlus } from "react-icons/go";
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 const ExploreProducts = () => {
     const [sideBarIsOpen, setSidebarIsOpen] = useState(true);
@@ -199,11 +202,28 @@ const ExploreProducts = () => {
                         </div>
 
                         <div className="filters-section-e">
-                            <select id="sortDropdown" className="sort-dropdown">
+                            {/* <select id="sortDropdown" className="sort-dropdown">
                                 <option value="lowToHigh">Sort By</option>
                                 <option value="lowToHigh">Price Low to High</option>
                                 <option value="highToLow">Price High to Low</option>
-                            </select>
+                            </select> */}
+                            <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+                                <InputLabel id="demo-select-small-label">Age</InputLabel>
+                                <Select
+                                    labelId="demo-select-small-label"
+                                    id="demo-select-small"
+                                    value={23}
+                                    label="Age"
+                                    // onChange={handleChange}
+                                >
+                                    <MenuItem value="">
+                                        <em>None</em>
+                                    </MenuItem>
+                                    <MenuItem value={10}>Ten</MenuItem>
+                                    <MenuItem value={20}>Twenty</MenuItem>
+                                    <MenuItem value={30}>Thirty</MenuItem>
+                                </Select>
+                            </FormControl>
                         </div>
                     </div>
                 </div>
