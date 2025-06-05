@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import CartNavbar from '../CartNavbar/CartNavbar'
+import CartNavbar from '../../common/CartNavbar/CartNavbar'
 import './Cart.scss'
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { GoHeart } from 'react-icons/go';
-import Footer from '../Footer/Footer';
-import CustomModal from '../CouponModal/CouponModal';
+import Footer from '../../common/Footer/Footer';
+import CustomModal from '../../Theme/CouponModal/CouponModal';
 
 const Cart = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);

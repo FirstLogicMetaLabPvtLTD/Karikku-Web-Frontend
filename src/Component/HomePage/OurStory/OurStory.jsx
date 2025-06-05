@@ -1,6 +1,6 @@
 import React from 'react'
 import './OurStory.scss'
-import ExploreBtn from '../../Button/ExploreBtn'
+import ExploreBtn from '../../Theme/Button/ExploreBtn'
 
 const OurStory = () => {
     return (

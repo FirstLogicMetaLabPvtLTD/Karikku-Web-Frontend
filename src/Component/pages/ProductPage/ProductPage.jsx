@@ -1,6 +1,6 @@
 import React from 'react'
 import './ProductPage.scss'
-import Navbar from '../Navbar/Navbar'
+import Navbar from '../../common/Navbar/Navbar'
 
 const ProductPage = () => {
     return (

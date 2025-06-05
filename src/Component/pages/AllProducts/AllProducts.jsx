@@ -1,10 +1,10 @@
 
 import React from 'react'
-import Navbar from '../Navbar/Navbar'
+import Navbar from '../../common/Navbar/Navbar'
 import './AllProducts.scss'
 import { Link } from 'react-router-dom'
 import { ImArrowUpRight2 } from "react-icons/im";
-import Footer from '../Footer/Footer';
+import Footer from '../../common/Footer/Footer';
 
 
 const AllProducts = () => {

@@ -2,7 +2,7 @@ import React from 'react'
 import './About.scss'
 import { Link } from 'react-router-dom'
 import { BsArrowUpRightCircleFill } from 'react-icons/bs'
-import ExploreBtn from '../../Button/ExploreBtn'
+import ExploreBtn from '../../Theme/Button/ExploreBtn'
 
 const About = () => {
   return (
