@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import './ExploreProducts.scss'
-import Navbar from '../Navbar/Navbar'
-import ProductSidebar from '../ProductSidebar/ProductSidebar'
+import Navbar from '../../common/Navbar/Navbar'
+import ProductSidebar from '../../Theme/ProductSidebar/Productsidebar'
 import { VscSettings } from 'react-icons/vsc'
-import Footer from '../Footer/Footer'
-import ProductSidebarMobile from '../ProductSidebarMobile/ProductSidebarMobile'
+import Footer from '../../common/Footer/Footer'
+import ProductSidebarMobile from '../../Theme/ProductSidebarMobile/ProductSidebarMobile'
 import { GoPlus } from "react-icons/go";
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
 
 const ExploreProducts = () => {
     const [sideBarIsOpen, setSidebarIsOpen] = useState(true);

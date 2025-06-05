@@ -8,8 +8,8 @@ import ProductCards from './ProductCards/ProductCards'
 import Commitment from './Commitment/Commitment'
 import GreenBanner from './GreenBanner/GreenBanner'
 import FollowusandBlog from './FollowusandBlog/FollowusandBlog'
-import Footer from '../Footer/Footer'
-import Navbar from '../Navbar/Navbar'
+import Footer from '../common/Footer/Footer'
+import Navbar from '../common/Navbar/Navbar'
 
 const HomePage = () => {
   return (

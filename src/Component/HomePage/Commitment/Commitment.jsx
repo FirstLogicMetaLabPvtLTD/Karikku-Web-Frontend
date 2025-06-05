@@ -1,7 +1,7 @@
 import React from 'react'
 import './Commitment.scss'
 import { MdExplore } from 'react-icons/md'
-import ExploreBtn from '../../Button/ExploreBtn'
+import ExploreBtn from '../../Theme/Button/ExploreBtn'
 const Commitment = () => {
     return (
         <div className='CommitmentMainWrapper'>

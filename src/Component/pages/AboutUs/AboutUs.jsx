@@ -1,9 +1,10 @@
 import React from 'react'
 import './AboutUs.scss'
-import Navbar from '../Navbar/Navbar'
-import ExploreBtn from '../Button/ExploreBtn'
-import FollowusandBlog from '../HomePage/FollowusandBlog/FollowusandBlog'
-import Footer from '../Footer/Footer'
+// import Navbar from '../Navbar/Navbar'
+import ExploreBtn from '../../Theme/Button/ExploreBtn'
+import FollowusandBlog from '../../HomePage/FollowusandBlog/FollowusandBlog'
+import Footer from '../../common/Footer/Footer'
+import Navbar from '../../common/Navbar/Navbar'
 
 const AboutUs = () => {
     return (

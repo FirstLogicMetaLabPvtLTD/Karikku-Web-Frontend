@@ -1,6 +1,6 @@
 import React from 'react'
 import './FollowusandBlog.scss'
-import ExploreBtn from '../../Button/ExploreBtn';
+import ExploreBtn from '../../Theme/Button/ExploreBtn';
 import { BsArrowUpRightCircleFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 

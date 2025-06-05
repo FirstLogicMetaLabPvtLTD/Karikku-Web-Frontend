@@ -1,6 +1,6 @@
 import React from 'react';
 import './ProductCards.scss';
-import ExploreBtn from '../../Button/ExploreBtn';
+import ExploreBtn from '../../Theme/Button/ExploreBtn';
 
 const ProductCards = () => {
   return (
