@@ -9,6 +9,8 @@ import ExploreProducts from './Component/pages/ExploreProducts/ExploreProducts'
 import AboutUs from './Component/pages/AboutUs/AboutUs'
 import ProductPage from './Component/pages/ProductPage/ProductPage'
 import Blogs from './Component/pages/Blogs/Blogs'
+import ContactUs from './Component/pages/ContactUs/ContactUs'
+import Store from './Component/pages/Store/Store'
 
 function App() {
 
@@ -25,7 +27,8 @@ function App() {
           <Route path='/aboutus' element={<AboutUs />} />
           <Route path='/Product-page' element={<ProductPage />} />
           <Route path='/blogs' element={<Blogs />} />
-          {/* <Route path='/contact-us' element={<ContactUs />} /> */}
+          <Route path='/contact-us' element={<ContactUs />} />
+          <Route path='/store' element={<Store />} />
         </Routes>
 
 

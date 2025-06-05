@@ -1,0 +1,98 @@
+.contact-Main-wrapper {
+    
+    .contact-wrapper {
+        height: 100vh;
+        background-color: #E3F7E5;
+
+        .left-content {
+            height: 100%;
+            // background-color: yellow;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contactus-lef-side {
+            // background-color: red;
+
+            width: 80%;
+            margin: auto;
+
+            h2 {
+                font-family: Resonate;
+                font-weight: 400;
+                font-size: 56px;
+                padding-top: 12px;
+                background: linear-gradient(90deg, rgba(245, 189, 46, 1) 18%, rgba(52, 109, 0, 1) 44%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                letter-spacing: -2%;
+
+            }
+
+            h1 {
+                font-family: Nohemi;
+                font-weight: 600;
+                font-size: 70px;
+                line-height: 105%;
+                letter-spacing: -2%;
+                background: linear-gradient(90deg, rgba(115, 137, 51, 1) 18%, rgba(6, 44, 11, 1) 41%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+
+            }
+
+            p {
+                font-family: General Sans;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 130%;
+                width: 64%;
+                letter-spacing: -2%;
+
+            }
+
+            .button-container {
+                width: 236px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                padding-left: 20px;
+                padding-right: 10px;
+                justify-content: space-between;
+                border: 1px solid #0E3E13;
+                border-radius: 33px;
+
+                button {
+                    background: none;
+                    border: none;
+                    font-family: General Sans;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 125%;
+                    letter-spacing: 0%;
+                    vertical-align: middle;
+
+                }
+
+            }
+
+        }
+
+        .map-section {
+            padding:  40px;
+
+            .map-container {
+                width: 100%;
+                height: 697px;
+                border-radius: 20px;
+                overflow:hidden;
+            }
+
+        }
+        .footer{
+            // padding-top: 7rem;
+        }
+    }
+}

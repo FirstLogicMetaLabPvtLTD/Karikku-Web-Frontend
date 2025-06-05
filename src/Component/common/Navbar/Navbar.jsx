@@ -26,7 +26,7 @@ const Navbar = ({bgColor="#FFFFFF"}) => {
 
   return (
     <div className="NavbarMainWrapper">
-      <nav className={`navbar-desktop   navbar-expand-lg  fixed-top py-3`} style={{backgroundColor:bgColor}}>
+      <nav className={`navbar-desktop   navbar-expand-lg  fixed-top py-3 border-bottom`} style={{backgroundColor:bgColor}}>
         <div className="container-fluid d-flex justify-content-between align-items-center navbar-sub">
           {/* Left Links */}
           <div className="nav-item d-flex">
@@ -105,13 +105,13 @@ const Navbar = ({bgColor="#FFFFFF"}) => {
             <ul className="navbar flex-column gap-3 mt-4" type='none'>
               <li><Link to="/" className="text-white text-decoration-none offcanvas-link"><img className='off-image' src="./Images/off canvas logo.png" alt="" /></Link></li>
               <li><Link to="/" className="text-white text-decoration-none offcanvas-link">Home</Link></li>
-              <li><Link to="/about" className="text-white text-decoration-none offcanvas-link">About Us</Link></li>
+              <li><Link to="/aboutus" className="text-white text-decoration-none offcanvas-link">About Us</Link></li>
               <li><Link to="/process" className="text-white text-decoration-none offcanvas-link">Our Process</Link></li>
               <li><Link to="/stores" className="text-white text-decoration-none offcanvas-link">Stores</Link></li>
               <li><Link to="/products" className="text-white text-decoration-none offcanvas-link">Our Products</Link></li>
               <li><Link to="/whishlist" className="text-white text-decoration-none offcanvas-link">Whishlist</Link></li>
               <li><Link to="/cart" className="text-white text-decoration-none offcanvas-link">Cart</Link></li>
-              <li><Link to="/contact" className="text-white text-decoration-none offcanvas-link">Contact Us</Link></li>
+              <li><Link to="/contact-us" className="text-white text-decoration-none offcanvas-link">Contact Us</Link></li>
             </ul>
             <div className="text-center mt-4">
               <div className="btn btn-light text-success rounded-pill px-4" onClick={openLoginModal}>

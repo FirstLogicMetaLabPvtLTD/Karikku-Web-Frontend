@@ -319,7 +319,7 @@
             height: 25px;
             overflow: hidden;
             margin-bottom: -2px; // Remove any margin
-            display: block;
+            display: block; 
 
             img {
                 width: 100%;
@@ -496,7 +496,7 @@
   }
   
   .one-drop {
-    margin-top: -1px; // Slight overlap to eliminate gap
+    margin-top: 0px; // Slight overlap to eliminate gap
   }
 
         .one-drop {
