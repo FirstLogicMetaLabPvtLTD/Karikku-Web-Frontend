@@ -202,28 +202,25 @@ const ExploreProducts = () => {
                         </div>
 
                         <div className="filters-section-e">
-                            {/* <select id="sortDropdown" className="sort-dropdown">
+                            <select id="sortDropdown" className="sort-dropdown">
                                 <option value="lowToHigh">Sort By</option>
                                 <option value="lowToHigh">Price Low to High</option>
                                 <option value="highToLow">Price High to Low</option>
-                            </select> */}
-                            <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-                                <InputLabel id="demo-select-small-label">Age</InputLabel>
+                            </select>
+                            {/* <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+                                <InputLabel id="demo-select-small-label">Sort by</InputLabel>
                                 <Select
                                     labelId="demo-select-small-label"
                                     id="demo-select-small"
-                                    value={23}
+                                    value="23"
                                     label="Age"
                                     // onChange={handleChange}
                                 >
-                                    <MenuItem value="">
-                                        <em>None</em>
-                                    </MenuItem>
-                                    <MenuItem value={10}>Ten</MenuItem>
-                                    <MenuItem value={20}>Twenty</MenuItem>
-                                    <MenuItem value={30}>Thirty</MenuItem>
+                                 
+                                    <MenuItem value={10}>Price High to low</MenuItem>
+                                    <MenuItem value={20}>Price Low to High</MenuItem>
                                 </Select>
-                            </FormControl>
+                            </FormControl> */}
                         </div>
                     </div>
                 </div>

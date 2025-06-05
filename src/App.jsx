@@ -11,6 +11,7 @@ import AllProducts from './Component/AllProducts/AllProducts'
 import Productsidebar from './Component/ProductSidebar/Productsidebar'
 import ExploreProducts from './Component/ExploreProducts/ExploreProducts'
 import AboutUs from './Component/AboutUs/AboutUs'
+import ProductPage from './Component/ProductPage/ProductPage'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path='/Sidebar' element={<Productsidebar />} />
           <Route path='/ExploreProducts' element={<ExploreProducts />} />
           <Route path='/aboutus' element={<AboutUs />} />
+          <Route path='/Product-page' element={<ProductPage />} />
         </Routes>
 
 

@@ -1,7 +1,9 @@
 @import url('https://api.fontshare.com/v2/css?f[]=general-sans@1&display=swap');
 
 .NavbarMainWrapper {
-
+    .active{
+        color: #2ecc71 !important;
+    }
     .navbar-custom {
         padding: 1rem 2rem;
     }
@@ -22,6 +24,7 @@
         }
 
     }
+   
 
     .Nav-logo {
         width: 86;

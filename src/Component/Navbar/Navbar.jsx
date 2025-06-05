@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.scss';
 import { BsBasket3 } from 'react-icons/bs';
 
 const Navbar = ({bgColor="#FFFFFF"}) => {
+  const [activeNavItem,setNavItem]=useState('')
+  useEffect(()=>{
+      setNavItem(window.location.pathname)
+  },[window.location.pathname])
+  console.log(activeNavItem);
+  
   
 
   // Off-canvas states
@@ -15,10 +21,10 @@ const Navbar = ({bgColor="#FFFFFF"}) => {
         <div className="container-fluid d-flex justify-content-between align-items-center navbar-sub">
           {/* Left Links */}
           <div className="nav-item d-flex">
-            <Link className="nav-link mx-2" to="/">Home</Link>
-            <Link className="nav-link mx-2" to="/aboutus">About Us</Link>
-            <Link className="nav-link mx-2" to="/process">Our Process</Link>
-            <Link className="nav-link mx-2" to="/stores">Stores</Link>
+            <Link className={`nav-link mx-2 ${activeNavItem=='/'?'active':''}`} to="/">Home</Link>
+            <Link className={`nav-link mx-2 ${activeNavItem=='/aboutus'?'active':''}`} to="/aboutus">About Us</Link>
+            <Link className={`nav-link mx-2 ${activeNavItem=='/our-process'?'active':''}`} to="/process">Our Process</Link>
+            <Link className={`nav-link mx-2 ${activeNavItem=='/stores'?'active':''}`} to="/stores">Stores</Link>
           </div>
 
           {/* Center Logo */}
@@ -30,8 +36,8 @@ const Navbar = ({bgColor="#FFFFFF"}) => {
 
           {/* Right Links */}
           <div className="nav-item d-flex align-items-center">
-            <Link className="nav-link mx-2" to="/products">Our Products</Link>
-            <Link className="nav-link mx-2" to="/whishlist">Whishlist</Link>
+            <Link className={`nav-link mx-2 ${activeNavItem==='/products'?'active':''}`} to="/products">Our Products</Link>
+            <Link className={`nav-link mx-2 ${activeNavItem==='/whishlist'?'active':''}`} to="/whishlist">Whishlist</Link>
             <Link className="nav-link mx-2 d-flex align-items-center" to="/cart">
               <span className="me-1"><BsBasket3 className='basket-icon' /></span>Cart
             </Link>
