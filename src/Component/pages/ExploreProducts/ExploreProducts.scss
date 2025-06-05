@@ -117,6 +117,12 @@
             .right-side {
                 flex: 1;
                 min-width: 0; // Prevents flex item from overflowing
+
+                .Right-side-link {
+                    text-decoration: none !important;
+                }
+
+
             }
         }
 
@@ -129,6 +135,7 @@
                 &:last-child {
                     margin-bottom: 0;
                 }
+
             }
 
             .product-card-main {
@@ -153,9 +160,6 @@
                         align-items: center;
                         justify-content: center;
                         position: relative;
-                   
-                   
-
 
                         img {
                             width: 70%;
@@ -172,6 +176,7 @@
                             border-radius: 50%;
                             padding: .4rem;
                             cursor: pointer;
+                            color: #1B1919;
 
                             .add-icon {
                                 font-size: 25px;

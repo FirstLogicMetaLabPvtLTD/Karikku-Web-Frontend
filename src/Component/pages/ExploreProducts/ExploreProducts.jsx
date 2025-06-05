@@ -6,6 +6,7 @@ import { VscSettings } from 'react-icons/vsc'
 import Footer from '../../common/Footer/Footer'
 import ProductSidebarMobile from '../../Theme/ProductSidebarMobile/ProductSidebarMobile'
 import { GoPlus } from "react-icons/go";
+import { Link } from 'react-router-dom'
 
 const ExploreProducts = () => {
     const [sideBarIsOpen, setSidebarIsOpen] = useState(true);
@@ -239,29 +240,32 @@ const ExploreProducts = () => {
                     )}
 
                     <div className="cards-whole-three right-side">
-                        {productRows.map((product,) => (
-                            <div key={product.id} className="row three-cards">
-                                {product.map((product) => (
-                                    <div key={product.id} className={getColumnClass()}>
-                                        <div className="product-card-main">
-                                            <div className="product-card">
-                                                <div className="prod-image-section">
-                                                    <img src={product.image} alt="" />
-                                                    <div className="add-icon-wrapper">
-                                                        <GoPlus className='add-icon' />
+                        <Link to={'/Product-page'} className='Right-side-link'>
+                            {productRows.map((product,) => (
+                                <div key={product.id} className="row three-cards">
+                                    {product.map((product) => (
+                                        <div key={product.id} className={getColumnClass()}>
+                                            <div className="product-card-main">
+                                                <div className="product-card">
+                                                    <div className="prod-image-section">
+                                                        <img src={product.image} alt="" />
+                                                        <div className="add-icon-wrapper">
+                                                            <GoPlus className='add-icon' />
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="product-details">
-                                                    <h3>{product.name}</h3>
-                                                    <h4>{product.availability} <span>{product.volume}</span></h4>
-                                                    <p>{product.price}</p>
+                                                    <div className="product-details">
+                                                        <h3>{product.name}</h3>
+                                                        <h4>{product.availability} <span>{product.volume}</span></h4>
+                                                        <p>{product.price}</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                ))}
-                            </div>
-                        ))}
+                                    ))}
+                                </div>
+                            ))}
+                        </Link>
+
                     </div>
                 </div>
             </div>
