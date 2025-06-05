@@ -222,13 +222,13 @@
         }
 
         .link {
-            
+
             padding-top: 3rem;
             display: flex;
             justify-content: center;
             align-items: end;
 
-            h5{
+            h5 {
                 display: flex;
                 align-items: end;
                 gap: 10px;
@@ -236,14 +236,14 @@
 
             a {
                 text-decoration: #0E3E13;
-              
+
             }
 
             span {
                 margin: 0;
-                
+
                 padding-top: 1rem;
-                
+
                 background: linear-gradient(90deg, rgba(115, 137, 51, 1) 10%, rgba(6, 44, 11, 1) 83%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -267,8 +267,10 @@
 
     }
 
+    // ========================================BLOGS AND UPDATES========================================
+
     .blogs-updates {
-        padding: 8rem 0 3rem 4rem;
+        padding: 4rem;
 
         h2 {
             font-family: Nohemi;
@@ -288,14 +290,13 @@
             max-width: 800px;
             margin: auto;
         }
-        .article-card-main{
-            // text-align: center;
-        }
+
 
         .article-card {
             display: flex;
             align-items: stretch;
             background: #ffffff;
+            // background: #6f2828;
             overflow: hidden;
             max-width: 800px;
             margin: 20px auto;
@@ -411,29 +412,37 @@
                 }
             }
         }
-        .view{
-            width: 40%;
-            text-align: center;
-            .view-more{
-                 font-family: General Sans;
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 130%;
-                    letter-spacing: 0%;
-                    text-decoration: underline;
-                    text-decoration-style: solid;
-                    padding-top: 1rem;
-                    text-decoration-offset: 0%;
-                    text-decoration-thickness: 0%;
-                    text-decoration-skip-ink: auto;
-                    color: #151515;
+
+        .view {
+            max-width: 800px;
+            margin: auto;
+            margin-top: 1rem;
+
+            .view-more {
+                font-family: General Sans;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 130%;
+                letter-spacing: 0%;
+                text-decoration: underline;
+                text-decoration-style: solid;
+                padding-top: 1rem;
+                text-decoration-offset: 0%;
+                text-decoration-thickness: 0%;
+                text-decoration-skip-ink: auto;
+                color: #151515;
             }
         }
-       
+
 
         // Responsive design
         @media (max-width: 768px) {
             padding: 4rem 0 3rem 1rem;
+            .blogs-updates{
+                h2{
+                    padding-left: 11px !important ;
+                }
+            }
 
             h2 {
                 font-family: Nohemi;
@@ -458,7 +467,7 @@
                 }
 
                 .article-content {
-                    padding: 16px;
+                    padding: 10px !important;
                 }
 
                 .article-arrow {
@@ -473,8 +482,15 @@
         }
 
         @media (max-width: 480px) {
+           
+             .view-more{
+                            padding-left: 10px ;
+                    }
             .article-card {
+                
                 .article-content {
+                padding: 0 !important;
+                padding-top: 20px !important;
                     .article-title {
                         font-size: 14px;
                     }
@@ -482,6 +498,7 @@
                     .article-meta {
                         font-size: 11px;
                     }
+                   
                 }
             }
         }
@@ -508,6 +525,11 @@
     }
 
     @media (max-width: 576px) {
+        .blogs-updates{
+            h2{
+                padding-left: 11px !important   ;
+            }
+        }
         .marquee-item {
             width: 269px;
             height: 337px;
@@ -582,6 +604,7 @@
             }
         }
     }
+
     // @media(max-width: 768px){
     //     margin-top: 12rem;
     // }

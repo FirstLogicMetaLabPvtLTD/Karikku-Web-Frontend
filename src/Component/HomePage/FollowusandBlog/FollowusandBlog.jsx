@@ -204,7 +204,7 @@ const FollowusandBlog = () => {
 
             </div>
             
-              <div className="view">               <Link className='view-more'>View more</Link>
+              <div className="view"> <Link to='/blogs' className='view-more'>View more</Link>
             </div>
           </div>
         </div>

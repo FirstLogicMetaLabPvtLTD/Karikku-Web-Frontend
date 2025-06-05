@@ -2,18 +2,27 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.scss';
 import { BsBasket3 } from 'react-icons/bs';
+import LoginModal from '../../Theme/LoginModal/LoginModal'; 
 
 const Navbar = ({bgColor="#FFFFFF"}) => {
   const [activeNavItem,setNavItem]=useState('')
+  const [loginModalIsOpen, setLoginModalIsOpen] = useState(false);
+  
   useEffect(()=>{
       setNavItem(window.location.pathname)
   },[window.location.pathname])
+  
   console.log(activeNavItem);
   
+  // Function to open the login modal
+  const openLoginModal = () => {
+    setLoginModalIsOpen(true);
+  };
   
-
-  // Off-canvas states
-  const [isOpen, setIsOpen] = useState(false);
+  // Function to close the login modal
+  const closeLoginModal = () => {
+    setLoginModalIsOpen(false);
+  };
 
   return (
     <div className="NavbarMainWrapper">
@@ -41,15 +50,14 @@ const Navbar = ({bgColor="#FFFFFF"}) => {
             <Link className="nav-link mx-2 d-flex align-items-center" to="/cart">
               <span className="me-1"><BsBasket3 className='basket-icon' /></span>Cart
             </Link>
-            <Link to="/login" className="btn btn-success ms-2 px-3 py-1 rounded-pill">
+            <div className="btn btn-success ms-2 px-3 py-1 rounded-pill" onClick={openLoginModal}>
               Login/ Register
-            </Link>
+            </div>
           </div>
         </div>
       </nav>
 
       {/* Mobile-Navbar */}
-
       <div className="Mobile-Navbar">
         {/* Top navbar */}
         <nav className="navbar bg-light px-3 fixed-top">
@@ -106,17 +114,19 @@ const Navbar = ({bgColor="#FFFFFF"}) => {
               <li><Link to="/contact" className="text-white text-decoration-none offcanvas-link">Contact Us</Link></li>
             </ul>
             <div className="text-center mt-4">
-              <Link to="/login" className="btn btn-light text-success rounded-pill px-4">
+              <div className="btn btn-light text-success rounded-pill px-4" onClick={openLoginModal}>
                 Login / Register
-              </Link>
+              </div>
             </div>
           </div>
         </div>
-
-
       </div>
-    </div>
 
+      {/* Login Modal */}
+      {loginModalIsOpen && (
+        <LoginModal onClose={closeLoginModal} />
+      )}
+    </div>
   );
 }
 
