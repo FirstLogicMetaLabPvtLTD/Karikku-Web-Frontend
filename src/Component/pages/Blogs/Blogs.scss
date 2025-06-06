@@ -93,12 +93,15 @@
             }
         }
     }
-    .arrows-wrapper{
+
+    .arrows-wrapper {
         display: flex;
         justify-content: center;
         gap: .6rem;
         padding-top: 2rem;
-        .left-arrow,.right-arrow{
+
+        .left-arrow,
+        .right-arrow {
             width: 32px;
             height: 32px;
             border-radius: 50%;
@@ -106,14 +109,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            .arrow{
+
+            .arrow {
                 font-size: 20px;
             }
         }
-        .right-arrow{
+
+        .right-arrow {
             background-color: #3DAE4A;
             border: 1px solid #3DAE4A;
             color: white;
+        }
+    }
+
+    @media(max-width:567px) {
+        .blogs-content {
+            padding: 1rem !important;
+             .blog-header {
+        padding-top: 4rem !important;
+
+        h1 {
+            font-size: 40px !important;
+        }
+    }
+
         }
     }
 }

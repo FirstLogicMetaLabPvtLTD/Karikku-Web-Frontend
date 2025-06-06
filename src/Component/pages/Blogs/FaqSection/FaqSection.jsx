@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './FaqSection.scss'
+import { LuMinus } from "react-icons/lu";
+import { FiPlus } from "react-icons/fi";
 
 const faqData = {
   'Sale FAQs': [
@@ -106,37 +108,72 @@ const faqData = {
   ]
 };
 
-const FaqSection = () => {
-    const [activeCategory, setActiveCategory] = useState('Sale FAQs');
-    
-    const handleCategoryClick = (category) => {
-        setActiveCategory(category);
-    }
-    
-    const categories = Object.keys(faqData);
-    
-    return (
-        <div className='FaqSectionMainWrapper'>
-            <div className="faq-section">
-                <img src="/Images/faq-mask.svg" className='mask-image' alt="" />
-                <h1 className='faq-heading'>Frequently asked <br /> questions!</h1>
-                <div className="categories-wrapper">
-                    {categories.map((category) => (
-                        <div 
-                            key={category}
-                            className={`category-item ${activeCategory === category ? 'active-category' : ''}`}
-                            onClick={() => handleCategoryClick(category)}
-                        >
-                            {category}
-                        </div>
-                    ))}
-                </div>
-                <div className="questian-section-wrapper">
-                    
-                </div>
-            </div>
+const FaqItem = ({ question, answer, isExpanded, onToggle }) => {
+  return (
+    <div className="faq-item">
+      <div className="faq-question" onClick={onToggle}>
+        <h3>{question}</h3>
+        <button className={`expand-btn ${isExpanded ? 'expanded' : ''}`}>
+          {isExpanded ? <LuMinus size={20} /> : <FiPlus size={20} />}
+        </button>
+      </div>
+      <div className={`faq-answer ${isExpanded ? 'expanded' : ''}`}>
+        <div className="faq-answer-content">
+          <p>{answer}</p>
         </div>
-    )
+      </div>
+    </div>
+  );
+};
+
+const FaqSection = () => {
+  const [activeCategory, setActiveCategory] = useState('Sale FAQs');
+  const [expandedItems, setExpandedItems] = useState({});
+
+  const handleCategoryClick = (category) => {
+    setActiveCategory(category);
+    setExpandedItems({}); // Reset expanded items when category changes
+  };
+
+  const toggleItem = (itemId) => {
+    setExpandedItems(prev => ({
+      ...prev,
+      [itemId]: !prev[itemId]
+    }));
+  };
+
+  const categories = Object.keys(faqData);
+
+  return (
+    <div className='FaqSectionMainWrapper'>
+      <div className="faq-section">
+        <img src="/Images/faq-mask.svg" className='mask-image' alt="" />
+        <h1 className='faq-heading'>Frequently asked <br /> questions!</h1>
+        <div className="categories-wrapper">
+          {categories.map((category) => (
+            <div
+              key={category}
+              className={`category-item ${activeCategory === category ? 'active-category' : ''}`}
+              onClick={() => handleCategoryClick(category)}
+            >
+              {category}
+            </div>
+          ))}
+        </div>
+        <div className="questian-section-wrapper">
+          {faqData[activeCategory].map((item) => (
+            <FaqItem
+              key={item.id}
+              question={item.question}
+              answer={item.answer}
+              isExpanded={expandedItems[item.id] || false}
+              onToggle={() => toggleItem(item.id)}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default FaqSection
