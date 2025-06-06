@@ -4,6 +4,8 @@ import Navbar from '../../common/Navbar/Navbar'
 import './Blogs.scss'
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 import FaqSection from './FaqSection/FaqSection';
+import { Link } from 'react-router-dom';
+import Footer from '../../common/Footer/Footer';
 
 const Blogs = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -194,22 +196,24 @@ const Blogs = () => {
                         <div className="row">
                             {currentBlogs.map((blog) => (
                                 <div key={blog.id} className="col-lg-4 col-md-6 col-sm-6 col-12">
-                                    <div className="blog-card">
-                                        <div className="blog-image">
-                                            <img src={blog.image} alt={blog.title} />
-                                        </div>
-                                        <div className="blog-content">
-                                            <div className="category">{blog.category}</div>
-                                            <h2 className="blog-title">{blog.title}</h2>
-                                            <h4 className="blog-description">{blog.description}</h4>
-                                            <h5 className="blogged-user">{blog.author}</h5>
-                                            <div className="date-wrapper">
-                                                <div className='date'>{blog.date}</div>
-                                                <div><RxDotFilled className='dot-icon' /></div>
-                                                <div className='time'>{blog.readTime}</div>
+                                    <Link to="/blog-details" className='blog-link'>
+                                        <div className="blog-card">
+                                            <div className="blog-image">
+                                                <img src={blog.image} alt={blog.title} />
+                                            </div>
+                                            <div className="blog-content">
+                                                <div className="category">{blog.category}</div>
+                                                <h2 className="blog-title">{blog.title}</h2>
+                                                <h4 className="blog-description">{blog.description}</h4>
+                                                <h5 className="blogged-user">{blog.author}</h5>
+                                                <div className="date-wrapper">
+                                                    <div className='date'>{blog.date}</div>
+                                                    <div><RxDotFilled className='dot-icon' /></div>
+                                                    <div className='time'>{blog.readTime}</div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             ))}
                         </div>
@@ -239,8 +243,8 @@ const Blogs = () => {
                 </div>
 
             </div>
-                <FaqSection />
-
+            <FaqSection />
+            <Footer />
         </div>
     )
 }
