@@ -6,6 +6,7 @@ import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 import FaqSection from './FaqSection/FaqSection';
 import { Link } from 'react-router-dom';
 import Footer from '../../common/Footer/Footer';
+import ScrollToTopOnMount from '../../common/ScrollToTopOnMount';
 
 const Blogs = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -186,6 +187,7 @@ const Blogs = () => {
 
     return (
         <div className='BlogsMainWrapper'>
+            <ScrollToTopOnMount/>
             <Navbar />
             <div className="blogs-content">
                 <div className='blog-header'>

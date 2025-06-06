@@ -34,9 +34,11 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form-wrapper">
-      <div className="palm-leaf-decoration"></div>
+      <div className="palm-leaf-decoration">
+        <img src="/Images/our-story-leaf.png" alt="" />
+      </div>
       <div className="contact-form-card">
-        <h3 className="form-title">Contact us today!</h3>
+        <h3 className="form-title">Connect us today!</h3>
         
         <div className="contact-form">
           <div className="form-group">

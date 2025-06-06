@@ -1,4 +1,5 @@
 .contact-form-wrapper {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,12 +11,12 @@
     .palm-leaf-decoration {
         position: absolute;
         top: 20px;
-        right: 20px;
+        right: 40px;
         width: 200px;
         height: 120px;
-        background: linear-gradient(45deg, #68B873 0%, #5BA366 50%, #4A9C55 100%);
-        clip-path: polygon(0% 0%, 85% 0%, 95% 15%, 100% 30%, 95% 45%, 90% 60%, 80% 75%, 70% 85%, 50% 95%, 30% 100%, 15% 95%, 5% 85%, 0% 70%, 5% 55%, 10% 40%, 15% 25%, 5% 10%);
-        opacity: 0.3;
+        // background: linear-gradient(45deg, #68B873 0%, #5BA366 50%, #4A9C55 100%);
+        // clip-path: polygon(0% 0%, 85% 0%, 95% 15%, 100% 30%, 95% 45%, 90% 60%, 80% 75%, 70% 85%, 50% 95%, 30% 100%, 15% 95%, 5% 85%, 0% 70%, 5% 55%, 10% 40%, 15% 25%, 5% 10%);
+        // opacity: 0.3;
 
         &::before {
             content: '';
@@ -24,8 +25,8 @@
             right: -30px;
             width: 150px;
             height: 100px;
-            background: linear-gradient(45deg, #68B873 0%, #5BA366 50%, #4A9C55 100%);
-            clip-path: polygon(0% 20%, 20% 0%, 40% 5%, 60% 0%, 80% 10%, 100% 25%, 95% 45%, 85% 65%, 70% 80%, 50% 90%, 30% 95%, 10% 85%, 0% 65%, 5% 45%, 10% 25%);
+            // background: linear-gradient(45deg, #68B873 0%, #5BA366 50%, #4A9C55 100%);
+            // clip-path: polygon(0% 20%, 20% 0%, 40% 5%, 60% 0%, 80% 10%, 100% 25%, 95% 45%, 85% 65%, 70% 80%, 50% 90%, 30% 95%, 10% 85%, 0% 65%, 5% 45%, 10% 25%);
             opacity: 0.2;
         }
     }
@@ -36,18 +37,20 @@
         padding: 40px;
         // box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         border: 1px solid #CEEDD1;
+        padding-bottom: 3rem;
+        border-radius: 8px;
         width: 100%;
         max-width: 500px;
         position: relative;
         z-index: 10;
 
         .form-title {
+            font-family: General Sans;
+            font-weight: 500;
             font-size: 24px;
-            font-weight: 600;
-            color: #2D5016;
-            margin-bottom: 30px;
-            text-align: left;
-            font-family: inherit;
+            line-height: 120%;
+            letter-spacing: -2%;
+
         }
 
         .contact-form {
@@ -61,11 +64,12 @@
                 gap: 8px;
 
                 label {
-                    font-size: 14px;
+                    font-family: General Sans;
                     font-weight: 500;
-                    color: #2D5016;
-                    margin-bottom: 5px;
-                    font-family: inherit;
+                    font-size: 16px;
+                    line-height: 110.00000000000001%;
+                    letter-spacing: 0%;
+
                 }
 
                 &.half-width {
@@ -208,26 +212,45 @@
         }
     }
 
-    @media (max-width: 768px) {
-        .contact-form-card {
-            padding: 30px 20px;
-            margin: 10px;
-        }
-
-        .palm-leaf-decoration {
-            width: 120px;
-            height: 80px;
-            top: 10px;
-            right: 10px;
-
-            &::before {
-                width: 100px;
-                height: 70px;
-                right: -20px;
-                top: -8px;
+    @media(max-width:576px) {
+        padding: 0 !important;
+        .form-title {
+                font-size: 20px !important;
             }
-        }
+            .palm-leaf-decoration{
+                img{
+                    display: none;
+                }
+            }
+            .contact-form-card{
+                background: #E3F7E5;
+                padding: 5px;
+            }
+           
+          
+
     }
+
+    // @media (max-width: 768px) {
+    //     .contact-form-card {
+    //         padding: 30px 20px;
+    //         margin: 10px;
+    //     }
+
+    //     .palm-leaf-decoration {
+    //         width: 120px;
+    //         height: 80px;
+    //         top: 10px;
+    //         right: 10px;
+
+    //         &::before {
+    //             width: 100px;
+    //             height: 70px;
+    //             right: -20px;
+    //             top: -8px;
+    //         }
+    //     }
+    // }
 }
 
 .form-control {

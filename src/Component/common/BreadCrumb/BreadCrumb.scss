@@ -41,6 +41,9 @@
             margin: 0 4px;
         }
     }
+    @media(max-width:576px){
+        padding: 20px 10px;
+    }
 }
 
 // If you want to use it within a container

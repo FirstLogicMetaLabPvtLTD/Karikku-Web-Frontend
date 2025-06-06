@@ -11,6 +11,8 @@ import ProductPage from './Component/pages/ProductPage/ProductPage'
 import Blogs from './Component/pages/Blogs/Blogs'
 import ContactUs from './Component/pages/ContactUs/ContactUs'
 import Store from './Component/pages/Store/Store'
+import Wishlist from './Component/pages/Wishlist/Wishlist'
+import BlogDetailsPage from './Component/pages/BlogDetailsPage/BlogDetailsPage'
 
 function App() {
 
@@ -24,11 +26,14 @@ function App() {
           <Route path='/products' element={<AllProducts />} />
           <Route path='/Sidebar' element={<Productsidebar />} />
           <Route path='/ExploreProducts' element={<ExploreProducts />} />
-          <Route path='/aboutus' element={<AboutUs />} />
+          <Route path='/about-us' element={<AboutUs />} />
           <Route path='/Product-page' element={<ProductPage />} />
           <Route path='/blogs' element={<Blogs />} />
           <Route path='/contact-us' element={<ContactUs />} />
           <Route path='/store' element={<Store />} />
+          <Route path='/wishlist' element={<Wishlist />} />
+          <Route path='/blog-details' element={<BlogDetailsPage/>}/>
+          
         </Routes>
 
 

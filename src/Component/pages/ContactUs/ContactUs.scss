@@ -1,7 +1,9 @@
 .contact-Main-wrapper {
     
     .contact-wrapper {
-        height: 100vh;
+        margin-top: 2rem;
+        height: 110vh;
+        // padding-bottom: 3rem;
         background-color: #E3F7E5;
 
         .left-content {
@@ -33,7 +35,7 @@
             h1 {
                 font-family: Nohemi;
                 font-weight: 600;
-                font-size: 70px;
+                font-size: 60px;
                 line-height: 105%;
                 letter-spacing: -2%;
                 background: linear-gradient(90deg, rgba(115, 137, 51, 1) 18%, rgba(6, 44, 11, 1) 41%);
@@ -79,9 +81,47 @@
             }
 
         }
+         .commitment-features {
+        width: 100%;
+        margin: auto;
+        margin-top: 8rem;
+
+        h3 {
+            font-family: General Sans;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 130%;
+            letter-spacing: 0%;
+            padding-top: 1rem;
+        }
+
+        p {
+            font-family: General Sans;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            letter-spacing: 0%;
+            padding-top: .8rem;
+
+        }
+        
+        .col-lg-3 {
+            padding: 0 5px;
+            margin-bottom: 30px;
+            .feature-para{
+                p{
+                }
+                display: flex;
+                width: 100%;
+                gap: 10px;
+            }
+        }
+    }
+
 
         .map-section {
             padding:  40px;
+            margin-top: 4rem;
 
             .map-container {
                 width: 100%;
@@ -93,6 +133,39 @@
         }
         .footer{
             // padding-top: 7rem;
+        }
+    }
+
+    @media(max-width: 576px){
+        .contact-wrapper{
+            margin-top: 0 !important;
+             .left-content {
+            height: 100%;
+            // background-color: yellow;
+            display: flex;
+            align-items: start !important;
+            height: 45vh;
+        }
+        }
+        .contactus-lef-side{
+            width: 100% !important;
+            margin-top: 4rem !important;
+            text-align: center;
+            h2{
+                font-size: 30px !important;
+            }
+            h1{
+                font-size: 30px !important;
+            }
+            p{
+                font-size: 16px !important;
+                // text-align: center !important;
+                width: 100% !important;
+            }
+          
+        }
+        .map-section{
+            padding: 10px !important;
         }
     }
 }

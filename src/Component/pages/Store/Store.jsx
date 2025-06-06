@@ -4,6 +4,7 @@ import Navbar from '../../common/Navbar/Navbar';
 import './Store.scss'
 import { IoSearch, IoSearchOutline } from 'react-icons/io5';
 import { FaWhatsapp } from 'react-icons/fa';
+import Footer from '../../common/Footer/Footer';
 
 const Store = () => {
     const breadcrumbItems = [
@@ -16,7 +17,7 @@ const Store = () => {
                 <Navbar />
                 <div className="gradient">
                     <img src="" alt="" />
-                    <div className="breadcrumb">
+                    <div className="container breadcrumb">
                         <Breadcrumb items={breadcrumbItems} />
                     </div>
                     <div className="our-branches">
@@ -183,6 +184,7 @@ const Store = () => {
 
 
             </div>
+            <Footer/>
         </div>
     )
 }
