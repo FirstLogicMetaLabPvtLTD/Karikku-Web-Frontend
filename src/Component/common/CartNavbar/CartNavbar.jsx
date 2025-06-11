@@ -4,8 +4,9 @@ import { FaCartShopping } from 'react-icons/fa6';
 import { HiCreditCard } from 'react-icons/hi';
 import { MdHomeFilled, MdVerified } from 'react-icons/md';
 import './cartNavbar.scss'
+import { Link } from 'react-router-dom';
 
-const KarikkuNavbar = () => {
+const CartNavbar = () => {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const currentPath = window.location.pathname;
 
@@ -21,11 +22,13 @@ const KarikkuNavbar = () => {
         <div className="container-fluid  px-2 px-md-3 px-lg-5">
           {/* Left - Logo */}
           <div className="navbar-brand d-flex align-items-center">
+           <Link to={'/'}>
             <img
               src="./Images/Karikku logo-bg-removed.svg"
               alt="Karikku"
               height="40"
             />
+           </Link>
           </div>
 
           {/* Mobile hamburger button */}
@@ -179,4 +182,4 @@ const KarikkuNavbar = () => {
   );
 };
 
-export default KarikkuNavbar;
+export default CartNavbar;

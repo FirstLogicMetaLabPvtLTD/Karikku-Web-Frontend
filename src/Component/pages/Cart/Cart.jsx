@@ -5,9 +5,17 @@ import { RiDeleteBin6Line } from 'react-icons/ri';
 import { GoHeart } from 'react-icons/go';
 import Footer from '../../common/Footer/Footer';
 import CustomModal from '../../Theme/CouponModal/CouponModal';
+import PaymentSummary from '../../Theme/PaymentSummary/PaymentSummary';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+      const navigate = useNavigate();
+
+       const handleCartCheckout = () => {
+        navigate('/address');
+    };
+
 
   function openModal() {
     setModalIsOpen(true);
@@ -139,49 +147,9 @@ const Cart = () => {
           }
 
         </div>
-        <div className="col-lg-4 payment-summary-section">
-          <div className="coupon">
-            <div className="left-coupon">
-              <img src="/Images/coin.svg" alt="" />
-              <h3>Apply coins</h3>
-            </div>
-            <div className="right-coupon">
-              <p onClick={openModal}>Apply</p>
-            </div>
-          </div>
-          <div className="payment-summary">
-            <h3>Payment summary</h3>
-            <table>
-              <tr className='table-row'>
-                <td className='left-side'>Total MRP</td>
-                <td className='right-side'>₹223.00</td>
-              </tr>
-               <tr className='table-row'>
-                <td className='left-side'>Discount on MRP</td>
-                <td className='right-side'style={{color:"#3DAE4A"}}>₹223.00</td>
-              </tr>
-               <tr className='table-row'>
-                <td className='left-side'>Coupon savings</td>
-                <td className='right-side' style={{color:"#3DAE4A"}}>-₹223.00</td>
-              </tr>
-               <tr className='table-row'>
-                <td className='left-side'>Appicable Gst</td>
-                <td className='right-side'>₹223.00</td>
-              </tr>
-               <tr className='table-row border-bottom'>
-                <td className='left-side'>Delivery</td>
-                <td className='right-side'>₹223.00</td>
-              </tr>
-               <tr className='table-row'>
-                <td className='left-side' style={{fontWeight:"600"}}>Total</td>
-                <td className='right-side'  style={{fontWeight:"600"}}>₹1058.00</td>
-              </tr>
-            </table>
-          </div>
-          <div className="checkout-btn">
-            <button>Proceed to checkout</button>
-          </div>
-        </div>
+       <div className="col-lg-4">
+        <PaymentSummary onCheckout={handleCartCheckout}/>
+       </div>
       </div>
     </div>
     <Footer/>

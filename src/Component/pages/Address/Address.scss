@@ -1,0 +1,24 @@
+.AddressMainWrapper {
+    .address{
+        padding: 2rem 2rem;
+    }
+    .cart-header {
+        background: white;
+        // padding: 15px 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+
+        h2 {
+            font-family: General Sans;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 105%;
+            letter-spacing: -2%;
+            background: linear-gradient(90deg, rgba(115, 137, 51, 1) 0%, rgba(6, 44, 11, 1) 12%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+    }
+
+}

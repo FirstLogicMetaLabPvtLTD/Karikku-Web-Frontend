@@ -1,0 +1,71 @@
+.PaymentsummaryMainWrapper{
+    .payment-summary {
+      margin-top: 1rem;
+      border: 1px solid #E6E6E6;
+      border-radius: 8px;
+      padding: 20px;
+
+      h3 {
+        font-family: General Sans;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 0%;
+        border-bottom: 1px solid #E6E6E6;
+        padding-bottom: .8rem;
+
+      }
+
+      table {
+        width: 100%;
+      }
+
+      .table-row {
+        display: flex;
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: space-between;
+
+        .left-side,
+        .right-side {
+          font-family: General Sans;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 130%;
+          letter-spacing: -2%;
+          text-align: center;
+          color: #1B1919;
+
+        }
+
+        .right-side {
+          font-weight: 500;
+        }
+      }
+
+      .border-bottom {
+        padding-bottom: 1rem;
+      }
+
+    }
+
+    .checkout-btn {
+      padding-top: 1rem;
+      text-align: center;
+
+      button {
+        padding: 16px 20px 16px 20px;
+        background-color: #3DAE4A;
+        border: none;
+        color: #ffffff;
+        border-radius: 78px;
+        width: 100%;
+        font-family: General Sans;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 0%;
+
+      }
+    }
+}  

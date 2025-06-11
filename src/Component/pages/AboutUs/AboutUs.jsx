@@ -9,6 +9,7 @@ import Navbar from '../../common/Navbar/Navbar'
 const AboutUs = () => {
     return (
         <div className='AboutUsWrapper'>
+            {/* <ScrollT/> */}
             <Navbar bgColor={"#F3FFF4"} />
             <div className="our-story">
                 <h3>Our Story</h3>

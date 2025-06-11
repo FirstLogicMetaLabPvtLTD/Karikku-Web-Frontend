@@ -13,6 +13,7 @@ import ContactUs from './Component/pages/ContactUs/ContactUs'
 import Store from './Component/pages/Store/Store'
 import Wishlist from './Component/pages/Wishlist/Wishlist'
 import BlogDetailsPage from './Component/pages/BlogDetailsPage/BlogDetailsPage'
+import Address from './Component/pages/Address/Address'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route path='/store' element={<Store />} />
           <Route path='/wishlist' element={<Wishlist />} />
           <Route path='/blog-details' element={<BlogDetailsPage/>}/>
+          <Route path='/address' element={<Address/>}/>
           
         </Routes>
 
