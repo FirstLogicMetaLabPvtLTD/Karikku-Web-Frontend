@@ -11,6 +11,8 @@ const AllProducts = () => {
     return (
         <div className='exclusivewrapper'>
 
+            {/* /////// */}
+
             <Navbar />
 
             <div className="exclusive-content">

@@ -238,7 +238,7 @@ const ExploreProducts = () => {
                             showTriggerButton={false}
                         />
                     )}
-
+                    {/* //// */}
                     <div className="cards-whole-three right-side">
                         <Link to={'/Product-page'} className='Right-side-link'>
                             {productRows.map((product,) => (
