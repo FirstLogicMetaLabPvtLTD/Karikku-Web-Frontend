@@ -86,7 +86,10 @@ const FollowusandBlog = () => {
             </div>
           </div>
         </div>
-        <div className="blogs-updates">
+
+        {/* blogs */}
+
+        {/* <div className="blogs-updates">
           <h2>Blogs and updates</h2>
           <div className="article-card-main">
             <div className="article-card">
@@ -207,7 +210,7 @@ const FollowusandBlog = () => {
               <div className="view"> <Link to='/blogs' className='view-more'>View more</Link>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

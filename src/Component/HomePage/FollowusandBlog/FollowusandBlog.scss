@@ -196,6 +196,7 @@
     .bottom-head-section {
         text-align: center;
         margin-top: 2rem;
+        margin-bottom: 3rem;
 
         h2 {
             font-family: Nohemi;
@@ -481,7 +482,7 @@
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 576px) {
            
              .view-more{
                             padding-left: 10px ;
@@ -505,24 +506,7 @@
     }
 
     // Responsive design
-    @media (max-width: 768px) {
-        .marquee-container {
-            padding: 1rem 0;
-        }
-
-        .marquee-item {
-            width: 250px;
-            height: 180px;
-        }
-
-        .marquee-content {
-            gap: 1rem;
-        }
-
-        .marquee {
-            animation-duration: 25s;
-        }
-    }
+   
 
     @media (max-width: 576px) {
         .blogs-updates{
@@ -540,33 +524,7 @@
             animation-duration: 20s;
         }
     }
-
-    // Alternative color schemes (optional)
-    .marquee-container.theme-green {
-        background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-
-        &::before {
-            background: linear-gradient(to right, rgba(17, 153, 142, 1), transparent);
-        }
-
-        &::after {
-            background: linear-gradient(to left, rgba(56, 239, 125, 1), transparent);
-        }
-    }
-
-    .marquee-container.theme-orange {
-        background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
-
-        &::before {
-            background: linear-gradient(to right, rgba(255, 154, 158, 1), transparent);
-        }
-
-        &::after {
-            background: linear-gradient(to left, rgba(254, 207, 239, 1), transparent);
-        }
-    }
-
-    @media(max-width: 576px) {
+     @media(max-width: 576px) {
         margin-top: 8rem;
 
         .head-section {
@@ -604,6 +562,51 @@
             }
         }
     }
+     @media(min-width:577px) and  (max-width: 768px) {
+        .marquee-container {
+            padding: 1rem 0;
+        }
+
+        .marquee-item {
+            width: 250px;
+            height: 180px;
+        }
+
+        .marquee-content {
+            gap: 1rem;
+        }
+
+        .marquee {
+            animation-duration: 25s;
+        }
+    }
+
+    // Alternative color schemes (optional)
+    .marquee-container.theme-green {
+        background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+
+        &::before {
+            background: linear-gradient(to right, rgba(17, 153, 142, 1), transparent);
+        }
+
+        &::after {
+            background: linear-gradient(to left, rgba(56, 239, 125, 1), transparent);
+        }
+    }
+
+    .marquee-container.theme-orange {
+        background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+
+        &::before {
+            background: linear-gradient(to right, rgba(255, 154, 158, 1), transparent);
+        }
+
+        &::after {
+            background: linear-gradient(to left, rgba(254, 207, 239, 1), transparent);
+        }
+    }
+
+   
 
     // @media(max-width: 768px){
     //     margin-top: 12rem;

@@ -32,7 +32,7 @@ const Navbar = ({bgColor="#FFFFFF"}) => {
           <div className="nav-item d-flex">
             <Link className={`nav-link mx-2 ${activeNavItem=='/'?'active':''}`} to="/">Home</Link>
             <Link className={`nav-link mx-2 ${activeNavItem=='/aboutus'?'active':''}`} to="/about-us">About Us</Link>
-            <Link className={`nav-link mx-2 ${activeNavItem=='/stores'?'active':''}`} to="/store">Stores</Link>
+            {/* <Link className={`nav-link mx-2 ${activeNavItem=='/stores'?'active':''}`} to="/store">Stores</Link> */}
             <Link className={`nav-link mx-2 ${activeNavItem=='/our-process'?'active':''}`} to="/contact-us">Contact Us</Link>
             <Link className={`nav-link mx-2 ${activeNavItem=='/our-process'?'active':''}`} to="/process">FAQ</Link>
 
@@ -48,11 +48,13 @@ const Navbar = ({bgColor="#FFFFFF"}) => {
           {/* Right Links */}
           <div className="nav-item d-flex align-items-center">
             <Link className={`nav-link mx-2 ${activeNavItem==='/products'?'active':''}`} to="/products">Our Products</Link>
-            <Link className={`nav-link mx-2 ${activeNavItem==='/whishlist'?'active':''}`} to="/wishlist">Whishlist</Link>
-            <Link className="nav-link mx-2 d-flex align-items-center" to="/cart">
+            {/* <Link className={`nav-link mx-2 ${activeNavItem==='/whishlist'?'active':''}`} to="/wishlist">Whishlist</Link> */}
+            {/* <Link className="nav-link mx-2 d-flex align-items-center" to="/cart">
               <span className="me-1"><BsBasket3 className='basket-icon' /></span>Cart
-            </Link>
-            <div className="btn btn-success ms-2 px-3 py-1 rounded-pill" onClick={openLoginModal}>
+            </Link> */}
+            <div className="btn btn-success ms-2 px-3 py-1 rounded-pill" 
+            // onClick={openLoginModal}
+            >
               Login/ Register
             </div>
           </div>
@@ -60,6 +62,7 @@ const Navbar = ({bgColor="#FFFFFF"}) => {
       </nav>
 
       {/* Mobile-Navbar */}
+
       <div className="Mobile-Navbar">
         {/* Top navbar */}
         <nav className="navbar bg-light px-3 fixed-top">
@@ -109,10 +112,10 @@ const Navbar = ({bgColor="#FFFFFF"}) => {
               <li><Link to="/" className="text-white text-decoration-none offcanvas-link">Home</Link></li>
               <li><Link to="/about-us" className="text-white text-decoration-none offcanvas-link">About Us</Link></li>
               <li><Link to="/process" className="text-white text-decoration-none offcanvas-link">Our Process</Link></li>
-              <li><Link to="/store" className="text-white text-decoration-none offcanvas-link">Stores</Link></li>
+              {/* <li><Link to="/store" className="text-white text-decoration-none offcanvas-link">Stores</Link></li> */}
               <li><Link to="/products" className="text-white text-decoration-none offcanvas-link">Our Products</Link></li>
-              <li><Link to="/whishlist" className="text-white text-decoration-none offcanvas-link">Whishlist</Link></li>
-              <li><Link to="/cart" className="text-white text-decoration-none offcanvas-link">Cart</Link></li>
+              {/* <li><Link to="/whishlist" className="text-white text-decoration-none offcanvas-link">Whishlist</Link></li> */}
+              {/* <li><Link to="/cart" className="text-white text-decoration-none offcanvas-link">Cart</Link></li> */}
               <li><Link to="/contact-us" className="text-white text-decoration-none offcanvas-link">Contact Us</Link></li>
             </ul>
             <div className="text-center mt-4">

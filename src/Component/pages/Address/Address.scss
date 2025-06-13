@@ -1,7 +1,8 @@
 .AddressMainWrapper {
-    .address{
+    .address {
         padding: 2rem 2rem;
     }
+
     .cart-header {
         background: white;
         // padding: 15px 20px;
@@ -19,6 +20,78 @@
             -webkit-text-fill-color: transparent;
 
         }
+    }
+
+    .address-form {
+        // background: red;
+        padding-left: 0;
+
+        input,
+        input::placeholder {
+            font-family: General Sans;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 110.00000000000001%;
+            letter-spacing: 0%;
+
+        }
+
+        .input-label {
+            font-family: General Sans;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 110.00000000000001%;
+            letter-spacing: 0%;
+
+        }
+    }
+
+    .custom-flag-dropdown {
+        border-right: 1px solid #ccc;
+        background-color: #ffff;
+
+    }
+
+    .custom-phone-input {
+        //   border: none !important;
+        font-size: 18px;
+        padding-left: 3rem;
+        //   width: 180px;
+    }
+
+    .address-type {
+        .adresses {
+            display: flex;
+            gap: 1rem !important;
+
+            button {
+                padding: 10px 30px;
+                border-radius: 10px;
+                font-family: Nohemi;
+                font-weight: 400;
+                font-size: 16px;
+                // line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+
+            }
+
+            .selected-type {
+                background-color: #2E8E39;
+                border: 1px solid #42B44F;
+            }
+        }
+
+        h3 {
+            font-family: General Sans;
+            font-weight: 600;
+            font-size: 16px;
+            leading-trim: Cap height;
+            line-height: 130%;
+            letter-spacing: 0%;
+
+        }
+
     }
 
 }
