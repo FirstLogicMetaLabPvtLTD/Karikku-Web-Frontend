@@ -519,6 +519,49 @@
 
         }
 
+        .image-whole-section {
+           
+    
+    
+    
+            .card-image-section {
+    
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 200px;
+                background-color: #F2F2F2;
+    
+                img {
+                    width: 80%;
+                    // object-fit: cover;
+                    // height: 380px;
+                }
+            }
+    
+            .card-image-section-2 {
+    
+                height: 200px;
+                // background-color: blue;
+                background-color: #F2F2F2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                img {
+                    width: 89px;
+                    object-fit: cover;
+                    height: 143px;
+                }
+            }
+        }
+
+        
+
+
+
+
+
     }
 
     // Extra small screens

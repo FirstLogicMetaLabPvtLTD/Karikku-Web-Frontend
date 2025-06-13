@@ -11,7 +11,7 @@ const AllProducts = () => {
     return (
         <div className='exclusivewrapper'>
 
-            {/* /////// */}
+
 
             <Navbar />
 

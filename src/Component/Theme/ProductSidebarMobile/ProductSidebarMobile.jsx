@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import './ProductSidebarMobile.scss'
+import { RiArrowDropUpLine } from 'react-icons/ri';
+import { MdOutlineArrowDropDown } from 'react-icons/md';
+import { IoIosArrowDown } from 'react-icons/io';
 
 const ProductSidebarMobile = ({ isOpen: externalIsOpen, onToggle, showTriggerButton = true }) => {
     const [internalIsOpen, setInternalIsOpen] = useState(false);
@@ -143,7 +146,7 @@ const ProductSidebarMobile = ({ isOpen: externalIsOpen, onToggle, showTriggerBut
                         >
                             <span className="section-title">Categories</span>
                             <span className="chevron">
-                                {expandedSections.categories ? '▲' : '▼'}
+                                {expandedSections.categories ? <RiArrowDropUpLine style={{ fontSize: "36px" }} /> : <IoIosArrowDown style={{ fontSize: "22px" }} />}
                             </span>
                         </button>
 
@@ -172,7 +175,7 @@ const ProductSidebarMobile = ({ isOpen: externalIsOpen, onToggle, showTriggerBut
                         >
                             <span className="section-title">Price</span>
                             <span className="chevron">
-                                {expandedSections.price ? '▲' : '▼'}
+                                {expandedSections.price ? <RiArrowDropUpLine style={{ fontSize: "36px" }} /> : <IoIosArrowDown style={{ fontSize: "22px" }} />}
                             </span>
                         </button>
 
@@ -203,7 +206,7 @@ const ProductSidebarMobile = ({ isOpen: externalIsOpen, onToggle, showTriggerBut
                         >
                             <span className="section-title">Colors</span>
                             <span className="chevron">
-                                {expandedSections.colors ? '▲' : '▼'}
+                                {expandedSections.colors ? <RiArrowDropUpLine style={{ fontSize: "36px" }} /> : <IoIosArrowDown style={{ fontSize: "22px" }} />}
                             </span>
                         </button>
 

@@ -138,7 +138,7 @@ const ProductPage = () => {
 
                 <div className="row image-whole-section">
 
-                    <div className="col-lg-6 col-md-6 col-sm-6 " style={{ marginTop: '28px' }}>
+                    <div className="col-lg-6 col-md-6 col-sm-6 col-6 " style={{ marginTop: '28px' }}>
                         <div className='card-image-section'>
                             <img src="/Images/Coconut-banner-product.svg" alt="" />
                         </div>
@@ -146,14 +146,14 @@ const ProductPage = () => {
                     </div>
 
 
-                    <div className="col-lg-6 col-md-6 col-sm-6" style={{ marginTop: '28px' }}>
+                    <div className="col-lg-6 col-md-6 col-sm-6 col-6" style={{ marginTop: '28px' }}>
                         <div className="card-image-section-2">
                             <img src="/Images/Coconut-back.svg" alt="" />
 
                         </div>
 
                     </div>
-                    <div className="col-lg-6 col-md-6 col-sm-6" style={{ marginTop: '28px' }}>
+                    <div className="col-lg-6 col-md-6 col-sm-6 col-6" style={{ marginTop: '28px' }}>
                         <div className='card-image-section'>
                             <img src="/Images/Karikku-full.svg" alt="" />
                         </div>
@@ -161,7 +161,7 @@ const ProductPage = () => {
                     </div>
 
 
-                    <div className="col-lg-6 col-md-6 col-sm-6 " style={{ marginTop: '28px' }}>
+                    <div className="col-lg-6 col-md-6 col-sm-6 col-6 " style={{ marginTop: '28px' }}>
                         <div className="card-image-section-2">
                             <img src="/Images/Coconut-banner-product.svg" alt="" />
 
